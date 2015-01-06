@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "MJMBaseController.h"
+#import "MJMTabbarController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    MJMTabbarController *base = [[MJMTabbarController alloc] init];
+    
+    [self.window setRootViewController:base];
     return YES;
 }
 

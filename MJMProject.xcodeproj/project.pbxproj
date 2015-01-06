@@ -8,6 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		532D706F1A5BF34F00770242 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D70651A5BF34F00770242 /* AppDelegate.m */; };
+		532D70731A5BF52D00770242 /* WWSideslipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D70721A5BF52D00770242 /* WWSideslipViewController.m */; };
+		532D70761A5BF67100770242 /* MJMBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D70751A5BF67100770242 /* MJMBaseController.m */; };
+		532D70791A5BF82600770242 /* MJMContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D70781A5BF82600770242 /* MJMContactController.m */; };
+		532D707C1A5BF83400770242 /* MJMContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D707B1A5BF83400770242 /* MJMContentController.m */; };
+		532D707F1A5BF84400770242 /* MJMLunTanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D707E1A5BF84400770242 /* MJMLunTanController.m */; };
+		532D70821A5BF85200770242 /* MJMSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D70811A5BF85200770242 /* MJMSettingController.m */; };
+		532D708B1A5BFBF700770242 /* MJMTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D708A1A5BFBF700770242 /* MJMTabbarController.m */; };
+		532D709E1A5C053800770242 /* MJMTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D709D1A5C053800770242 /* MJMTabbar.m */; };
+		532D70A11A5C054900770242 /* MJMTabbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D70A01A5C054900770242 /* MJMTabbarButton.m */; };
+		532D70AA1A5C089600770242 /* TabBar1.png in Resources */ = {isa = PBXBuildFile; fileRef = 532D70A21A5C089600770242 /* TabBar1.png */; };
+		532D70AB1A5C089600770242 /* TabBar1Sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 532D70A31A5C089600770242 /* TabBar1Sel.png */; };
+		532D70AC1A5C089600770242 /* TabBar2.png in Resources */ = {isa = PBXBuildFile; fileRef = 532D70A41A5C089600770242 /* TabBar2.png */; };
+		532D70AD1A5C089600770242 /* TabBar2Sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 532D70A51A5C089600770242 /* TabBar2Sel.png */; };
+		532D70AE1A5C089600770242 /* TabBar3.png in Resources */ = {isa = PBXBuildFile; fileRef = 532D70A61A5C089600770242 /* TabBar3.png */; };
+		532D70AF1A5C089600770242 /* TabBar3Sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 532D70A71A5C089600770242 /* TabBar3Sel.png */; };
+		532D70B01A5C089600770242 /* TabBar4.png in Resources */ = {isa = PBXBuildFile; fileRef = 532D70A81A5C089600770242 /* TabBar4.png */; };
+		532D70B11A5C089600770242 /* TabBar4Sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 532D70A91A5C089600770242 /* TabBar4Sel.png */; };
+		532D70B41A5C0BDB00770242 /* UIImage+MJM.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D70B31A5C0BDB00770242 /* UIImage+MJM.m */; };
 		5F5C37B51A5BEF2000358678 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C37B41A5BEF2000358678 /* main.m */; };
 		5F5C37BB1A5BEF2000358678 /* MJMProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C37B91A5BEF2000358678 /* MJMProject.xcdatamodeld */; };
 		5F5C37C31A5BEF2000358678 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C37C21A5BEF2000358678 /* Images.xcassets */; };
@@ -28,6 +46,34 @@
 /* Begin PBXFileReference section */
 		532D70641A5BF34F00770242 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		532D70651A5BF34F00770242 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		532D70711A5BF52D00770242 /* WWSideslipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWSideslipViewController.h; sourceTree = "<group>"; };
+		532D70721A5BF52D00770242 /* WWSideslipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWSideslipViewController.m; sourceTree = "<group>"; };
+		532D70741A5BF67100770242 /* MJMBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMBaseController.h; sourceTree = "<group>"; };
+		532D70751A5BF67100770242 /* MJMBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMBaseController.m; sourceTree = "<group>"; };
+		532D70771A5BF82600770242 /* MJMContactController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMContactController.h; sourceTree = "<group>"; };
+		532D70781A5BF82600770242 /* MJMContactController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMContactController.m; sourceTree = "<group>"; };
+		532D707A1A5BF83400770242 /* MJMContentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMContentController.h; sourceTree = "<group>"; };
+		532D707B1A5BF83400770242 /* MJMContentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMContentController.m; sourceTree = "<group>"; };
+		532D707D1A5BF84400770242 /* MJMLunTanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMLunTanController.h; sourceTree = "<group>"; };
+		532D707E1A5BF84400770242 /* MJMLunTanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMLunTanController.m; sourceTree = "<group>"; };
+		532D70801A5BF85200770242 /* MJMSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMSettingController.h; sourceTree = "<group>"; };
+		532D70811A5BF85200770242 /* MJMSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMSettingController.m; sourceTree = "<group>"; };
+		532D70891A5BFBF700770242 /* MJMTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMTabbarController.h; sourceTree = "<group>"; };
+		532D708A1A5BFBF700770242 /* MJMTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMTabbarController.m; sourceTree = "<group>"; };
+		532D709C1A5C053800770242 /* MJMTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMTabbar.h; sourceTree = "<group>"; };
+		532D709D1A5C053800770242 /* MJMTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMTabbar.m; sourceTree = "<group>"; };
+		532D709F1A5C054900770242 /* MJMTabbarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMTabbarButton.h; sourceTree = "<group>"; };
+		532D70A01A5C054900770242 /* MJMTabbarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMTabbarButton.m; sourceTree = "<group>"; };
+		532D70A21A5C089600770242 /* TabBar1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabBar1.png; sourceTree = "<group>"; };
+		532D70A31A5C089600770242 /* TabBar1Sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabBar1Sel.png; sourceTree = "<group>"; };
+		532D70A41A5C089600770242 /* TabBar2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabBar2.png; sourceTree = "<group>"; };
+		532D70A51A5C089600770242 /* TabBar2Sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabBar2Sel.png; sourceTree = "<group>"; };
+		532D70A61A5C089600770242 /* TabBar3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabBar3.png; sourceTree = "<group>"; };
+		532D70A71A5C089600770242 /* TabBar3Sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabBar3Sel.png; sourceTree = "<group>"; };
+		532D70A81A5C089600770242 /* TabBar4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabBar4.png; sourceTree = "<group>"; };
+		532D70A91A5C089600770242 /* TabBar4Sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabBar4Sel.png; sourceTree = "<group>"; };
+		532D70B21A5C0BDB00770242 /* UIImage+MJM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MJM.h"; sourceTree = "<group>"; };
+		532D70B31A5C0BDB00770242 /* UIImage+MJM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MJM.m"; sourceTree = "<group>"; };
 		5F5C37AF1A5BEF2000358678 /* MJMProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJMProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5C37B31A5BEF2000358678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F5C37B41A5BEF2000358678 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -61,11 +107,12 @@
 		532D70561A5BF34E00770242 /* class */ = {
 			isa = PBXGroup;
 			children = (
+				532D70831A5BFB5800770242 /* images */,
 				532D70631A5BF34F00770242 /* MJMMain */,
 				532D706D1A5BF34F00770242 /* Other */,
-				532D70571A5BF34F00770242 /* MJMContact */,
 				532D705B1A5BF34F00770242 /* MJMContent */,
 				532D705F1A5BF34F00770242 /* MJMLunTan */,
+				532D70571A5BF34F00770242 /* MJMContact */,
 				532D70691A5BF34F00770242 /* MJMSetting */,
 			);
 			path = class;
@@ -84,6 +131,8 @@
 		532D70581A5BF34F00770242 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				532D70771A5BF82600770242 /* MJMContactController.h */,
+				532D70781A5BF82600770242 /* MJMContactController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -115,6 +164,8 @@
 		532D705C1A5BF34F00770242 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				532D707A1A5BF83400770242 /* MJMContentController.h */,
+				532D707B1A5BF83400770242 /* MJMContentController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -146,6 +197,8 @@
 		532D70601A5BF34F00770242 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				532D707D1A5BF84400770242 /* MJMLunTanController.h */,
+				532D707E1A5BF84400770242 /* MJMLunTanController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -179,6 +232,14 @@
 		532D70661A5BF34F00770242 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				532D70741A5BF67100770242 /* MJMBaseController.h */,
+				532D70751A5BF67100770242 /* MJMBaseController.m */,
+				532D70891A5BFBF700770242 /* MJMTabbarController.h */,
+				532D708A1A5BFBF700770242 /* MJMTabbarController.m */,
+				532D709C1A5C053800770242 /* MJMTabbar.h */,
+				532D709D1A5C053800770242 /* MJMTabbar.m */,
+				532D709F1A5C054900770242 /* MJMTabbarButton.h */,
+				532D70A01A5C054900770242 /* MJMTabbarButton.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -210,6 +271,8 @@
 		532D706A1A5BF34F00770242 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				532D70801A5BF85200770242 /* MJMSettingController.h */,
+				532D70811A5BF85200770242 /* MJMSettingController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -231,6 +294,7 @@
 		532D706D1A5BF34F00770242 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				532D70701A5BF52D00770242 /* WWSideslipViewControllerClass */,
 				532D706E1A5BF34F00770242 /* Category */,
 			);
 			path = Other;
@@ -239,8 +303,34 @@
 		532D706E1A5BF34F00770242 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				532D70B21A5C0BDB00770242 /* UIImage+MJM.h */,
+				532D70B31A5C0BDB00770242 /* UIImage+MJM.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		532D70701A5BF52D00770242 /* WWSideslipViewControllerClass */ = {
+			isa = PBXGroup;
+			children = (
+				532D70711A5BF52D00770242 /* WWSideslipViewController.h */,
+				532D70721A5BF52D00770242 /* WWSideslipViewController.m */,
+			);
+			path = WWSideslipViewControllerClass;
+			sourceTree = "<group>";
+		};
+		532D70831A5BFB5800770242 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				532D70A21A5C089600770242 /* TabBar1.png */,
+				532D70A31A5C089600770242 /* TabBar1Sel.png */,
+				532D70A41A5C089600770242 /* TabBar2.png */,
+				532D70A51A5C089600770242 /* TabBar2Sel.png */,
+				532D70A61A5C089600770242 /* TabBar3.png */,
+				532D70A71A5C089600770242 /* TabBar3Sel.png */,
+				532D70A81A5C089600770242 /* TabBar4.png */,
+				532D70A91A5C089600770242 /* TabBar4Sel.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		5F5C37A61A5BEF2000358678 = {
@@ -381,7 +471,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F5C37C61A5BEF2000358678 /* LaunchScreen.xib in Resources */,
+				532D70B11A5C089600770242 /* TabBar4Sel.png in Resources */,
+				532D70AD1A5C089600770242 /* TabBar2Sel.png in Resources */,
 				5F5C37C31A5BEF2000358678 /* Images.xcassets in Resources */,
+				532D70AE1A5C089600770242 /* TabBar3.png in Resources */,
+				532D70AF1A5C089600770242 /* TabBar3Sel.png in Resources */,
+				532D70B01A5C089600770242 /* TabBar4.png in Resources */,
+				532D70AB1A5C089600770242 /* TabBar1Sel.png in Resources */,
+				532D70AA1A5C089600770242 /* TabBar1.png in Resources */,
+				532D70AC1A5C089600770242 /* TabBar2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,9 +497,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				532D70A11A5C054900770242 /* MJMTabbarButton.m in Sources */,
+				532D709E1A5C053800770242 /* MJMTabbar.m in Sources */,
 				5F5C37B51A5BEF2000358678 /* main.m in Sources */,
 				5F5C37BB1A5BEF2000358678 /* MJMProject.xcdatamodeld in Sources */,
+				532D70821A5BF85200770242 /* MJMSettingController.m in Sources */,
+				532D707F1A5BF84400770242 /* MJMLunTanController.m in Sources */,
+				532D70B41A5C0BDB00770242 /* UIImage+MJM.m in Sources */,
+				532D70761A5BF67100770242 /* MJMBaseController.m in Sources */,
+				532D708B1A5BFBF700770242 /* MJMTabbarController.m in Sources */,
 				532D706F1A5BF34F00770242 /* AppDelegate.m in Sources */,
+				532D70731A5BF52D00770242 /* WWSideslipViewController.m in Sources */,
+				532D707C1A5BF83400770242 /* MJMContentController.m in Sources */,
+				532D70791A5BF82600770242 /* MJMContactController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
