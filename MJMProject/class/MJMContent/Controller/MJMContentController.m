@@ -11,8 +11,10 @@
 #import "ContentSelectionButton.h"
 #import "UIImage+MJM.h"
 #import "ContentSelectionView.h"
+#import "ContentDetailsCell.h"
+#import "ContentDetailCellFrame.h"
 
-@interface MJMContentController ()<ContentSelectionButtonDelegate,ContentSelectionDetailsDelegate>
+@interface MJMContentController ()<ContentSelectionButtonDelegate,ContentSelectionDetailsDelegate,UITableViewDelegate,UITableViewDataSource>
 {
     ContentSelectionDetails *selection_detailsView;
     ContentSelectionButton *selec_button;
@@ -24,30 +26,62 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    ContentSelectionView *contentSelection = [[ContentSelectionView alloc] initWithFrame:CGRectMake(0, 0, MJMWIDTH, contentSelectionHeight)];
-    [self.view addSubview:contentSelection];
-    
-    ContentSelectionDetails *selection_details = [[ContentSelectionDetails alloc] initWithFrame:CGRectMake(0,contentSelectionHeight,MJMWIDTH,0)];
-    selection_detailsView = selection_details;
-    selection_detailsView.delegate = self;
-    isset = NO;
-    
-    [self.view addSubview:selection_detailsView];
     
     ContentSelectionButton *selection_button = [[ContentSelectionButton alloc] initWithFrame:CGRectMake(MJMWIDTH-content_selectionbutton_width, 0, content_selectionbutton_width, contentSelectionHeight)];
     selection_button.delegate = self;
     selec_button = selection_button;
     [self.view addSubview:selec_button];
+    
+    ContentSelectionView *contentSelection = [[ContentSelectionView alloc] initWithFrame:CGRectMake(0, 0, MJMWIDTH, contentSelectionHeight)];
+    [self.view insertSubview:contentSelection belowSubview:selection_button];
+    
+    ContentSelectionDetails *selection_details = [[ContentSelectionDetails alloc] initWithFrame:CGRectMake(0,contentSelectionHeight-MJMHEIGHT,MJMWIDTH,MJMHEIGHT-30)];
+    selection_detailsView = selection_details;
+    selection_detailsView.delegate = self;
+    isset = NO;
+    [self.view insertSubview:selection_detailsView belowSubview:contentSelection];
+    
+    UITableView *tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, contentSelectionHeight, MJMWIDTH, MJMHEIGHT-contentSelectionHeight)];
+    tableview.delegate = self;
+    tableview.dataSource = self;
+    [self.view insertSubview:tableview belowSubview:selection_details];
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 20;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *ID = @"contact";
+    ContentDetailsCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (cell==nil) {
+        cell=[[ContentDetailsCell alloc] init];
+        [cell makeContentdetailscell];
+    }
+    return cell;
+    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ContentDetailCellFrame *frame = [[ContentDetailCellFrame alloc] init];
+    return [frame calculateContentcellFrame];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
 
 -(void)confirmbuttonclickedwithselectArray:(NSArray *)array
 {
-    selection_detailsView.hidden = YES;
     isset = NO;
     [UIView animateWithDuration:content_viewshow_duration animations:^{
         CGAffineTransform rotation = selec_button.imageView.transform;
         selec_button.imageView.transform = CGAffineTransformRotate(rotation,M_PI);
+        selection_detailsView.transform = CGAffineTransformMakeTranslation(0, -MJMHEIGHT);
     }];
 }
 
@@ -60,21 +94,15 @@
     
     if (isset) {
         isset = NO;
-        selection_detailsView.hidden = YES;
         [UIView animateWithDuration:content_viewshow_duration animations:^{
-            selection_detailsView.frame = CGRectMake(0, contentSelectionHeight, MJMWIDTH, 0);
-            selection_detailsView.details_tableview.frame = CGRectMake(0, 30, MJMWIDTH, 0);
+            selection_detailsView.transform = CGAffineTransformMakeTranslation(0, -MJMHEIGHT);
         }];
-        selection_detailsView.confirm_view.frame = CGRectMake(0, 0, MJMWIDTH, 0);
         return;
     }
     isset = YES;
-    selection_detailsView.hidden = NO;
     [UIView animateWithDuration:content_viewshow_duration animations:^{
-        selection_detailsView.frame = CGRectMake(0, contentSelectionHeight, MJMWIDTH, MJMHEIGHT-contentSelectionHeight);
-        selection_detailsView.details_tableview.frame = CGRectMake(0, 30, MJMWIDTH, MJMHEIGHT-contentSelectionHeight);
+        selection_detailsView.transform = CGAffineTransformMakeTranslation(0, MJMHEIGHT);
     }];
-    selection_detailsView.confirm_view.frame = CGRectMake(0, 0, MJMWIDTH, 30);
 }
 
 

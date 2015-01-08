@@ -35,8 +35,9 @@
 //MJMcontent
 #define contentSelectionHeight 30
 #define content_selectionbutton_width 30
-#define content_selec_buttons_width (MJMWIDTH - content_selectionbutton_width) / 3
-#define content_viewshow_duration 0.4
+#define confirm_button_height 30
+#define content_viewshow_duration 0.6
 #define distanceBetweenButton 20
+#define shadowHeight 30
 
 #endif

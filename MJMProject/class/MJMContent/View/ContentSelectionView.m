@@ -19,38 +19,54 @@
     }
     return self;
 }
+/***************************
+ 
+ view的主体
+ 
+ ***************************/
 -(void)makeContentselectionwithframe:(CGRect)frame
 {
     self.backgroundColor = tabbar_hudgray;
+    UIScrollView *selec_scrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, MJMWIDTH, 30)];
     SelectionDetailsData *data = [[SelectionDetailsData alloc] init];
     NSMutableArray *titlearray = [data makeSelectionData];
     
     NSInteger typeNum = titlearray.count;
+    CGFloat selec_mainbtnWidth = 95;
     for (int i = 0; i < typeNum; i++)
     {
         NSMutableDictionary *selection_data = titlearray[i];
-        NSString *selection_title = [selection_data objectForKey:@"selection_title"];
+        NSString *selection_title = [selection_data objectForKey:@"title_simple"];
         NSString *first_data = [selection_data objectForKey:@"first_data"];
-        UIView *selec_view = [[UIView alloc] initWithFrame:CGRectMake(content_selec_buttons_width*i, 0, content_selec_buttons_width, contentSelectionHeight)];
-        [self makeContentselectionbuttonWithtitle:selection_title firstdata:first_data index:i fatherView:selec_view];
+        UIView *selec_view = [self makeContentselectionbuttonWithtitle:selection_title firstdata:first_data index:i btnWidth:selec_mainbtnWidth];
         [self addSubview:selec_view];
+        [selec_scrollview addSubview:selec_view];
     }
+    selec_scrollview.showsHorizontalScrollIndicator = NO;
+    selec_scrollview.contentSize = CGSizeMake(typeNum*selec_mainbtnWidth+content_selectionbutton_width, 30);
+    [self addSubview:selec_scrollview];
 }
 
+/***************************
+ 
+selectionView 的主标题和副标题
+ 
+ ***************************/
 
--(void)makeContentselectionbuttonWithtitle:(NSString *)title firstdata:(NSString *)firstdata index:(NSInteger)index fatherView:(UIView *)fatherView
+-(UIView *)makeContentselectionbuttonWithtitle:(NSString *)title firstdata:(NSString *)firstdata index:(NSInteger)index btnWidth:(CGFloat)btnWidth
 {
+    UIView *selec_button = [[UIView alloc] initWithFrame:CGRectMake(btnWidth*index, 0, btnWidth, contentSelectionHeight)];
     SelectionLabel *label = [[SelectionLabel alloc] init];
     NSString *label_title = [title stringByAppendingFormat:@" >"];
+    CGFloat labelWidth = [self calculateSizeWithFont:12 Width:MAXFLOAT Height:MAXFLOAT Text:label_title].size.width;
     label.text = label_title;
     label.font = [UIFont systemFontOfSize:12];
-    label.tag = index;
     label.textAlignment = NSTextAlignmentCenter;
-    CGFloat labelWidth = [self calculateSizeWithFont:12 Width:MAXFLOAT Height:MAXFLOAT Text:label_title].size.width;
     label.frame = CGRectMake(10, 0, labelWidth, 30);
-    [fatherView addSubview:label];
+    [selec_button addSubview:label];
     
-    SelectionLabel *sublabel = [[SelectionLabel alloc] initWithFrame:CGRectMake(labelWidth+label.frame.origin.x, 0.5,content_selec_buttons_width-CGRectGetMaxX(label.frame), 30)];
+    CGFloat sublabelX = CGRectGetMaxX(label.frame)+5;
+    SelectionLabel *sublabel = [[SelectionLabel alloc] initWithFrame:CGRectMake(sublabelX-5, 0.8,btnWidth-sublabelX, 30)];
     sublabel.font = [UIFont systemFontOfSize:11];
     sublabel.text = firstdata;
     sublabel.tag = index;
@@ -60,9 +76,15 @@
                                              selector:@selector(selectionClicked:)
                                                  name:@"selection_button_click"
                                                object:nil];
-    [fatherView addSubview:sublabel];
+    [selec_button addSubview:sublabel];
+    return selec_button;
 }
 
+/***************************
+ 
+ 其他
+ 
+ ***************************/
 -(CGRect)calculateSizeWithFont:(NSInteger)Font Width:(NSInteger)Width Height:(NSInteger)Height Text:(NSString *)Text
 {
     NSDictionary *attr = @{NSFontAttributeName : [UIFont systemFontOfSize:Font]};

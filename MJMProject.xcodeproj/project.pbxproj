@@ -19,6 +19,8 @@
 		5306AD1F1A5E324500313D4A /* SelectionDetailsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5306AD1E1A5E324500313D4A /* SelectionDetailsData.m */; };
 		5306AD221A5E3C3A00313D4A /* ContentSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5306AD211A5E3C3A00313D4A /* ContentSelectionView.m */; };
 		5306AD251A5E3D5E00313D4A /* SelectionLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5306AD241A5E3D5E00313D4A /* SelectionLabel.m */; };
+		5306AD2B1A5EB30C00313D4A /* ContentDetailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5306AD2A1A5EB30C00313D4A /* ContentDetailsCell.m */; };
+		5306AD2E1A5EB4C500313D4A /* ContentDetailCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5306AD2D1A5EB4C500313D4A /* ContentDetailCellFrame.m */; };
 		532D706F1A5BF34F00770242 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D70651A5BF34F00770242 /* AppDelegate.m */; };
 		532D70731A5BF52D00770242 /* WWSideslipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D70721A5BF52D00770242 /* WWSideslipViewController.m */; };
 		532D70761A5BF67100770242 /* MJMBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D70751A5BF67100770242 /* MJMBaseController.m */; };
@@ -73,6 +75,10 @@
 		5306AD211A5E3C3A00313D4A /* ContentSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentSelectionView.m; sourceTree = "<group>"; };
 		5306AD231A5E3D5E00313D4A /* SelectionLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionLabel.h; sourceTree = "<group>"; };
 		5306AD241A5E3D5E00313D4A /* SelectionLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionLabel.m; sourceTree = "<group>"; };
+		5306AD291A5EB30C00313D4A /* ContentDetailsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentDetailsCell.h; sourceTree = "<group>"; };
+		5306AD2A1A5EB30C00313D4A /* ContentDetailsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentDetailsCell.m; sourceTree = "<group>"; };
+		5306AD2C1A5EB4C500313D4A /* ContentDetailCellFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentDetailCellFrame.h; sourceTree = "<group>"; };
+		5306AD2D1A5EB4C500313D4A /* ContentDetailCellFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentDetailCellFrame.m; sourceTree = "<group>"; };
 		532D70641A5BF34F00770242 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		532D70651A5BF34F00770242 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		532D70711A5BF52D00770242 /* WWSideslipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWSideslipViewController.h; sourceTree = "<group>"; };
@@ -219,6 +225,10 @@
 				5306AD131A5E1AC400313D4A /* ContentSelectionDetails.m */,
 				5306AD231A5E3D5E00313D4A /* SelectionLabel.h */,
 				5306AD241A5E3D5E00313D4A /* SelectionLabel.m */,
+				5306AD291A5EB30C00313D4A /* ContentDetailsCell.h */,
+				5306AD2A1A5EB30C00313D4A /* ContentDetailsCell.m */,
+				5306AD2C1A5EB4C500313D4A /* ContentDetailCellFrame.h */,
+				5306AD2D1A5EB4C500313D4A /* ContentDetailCellFrame.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -550,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5306AD2B1A5EB30C00313D4A /* ContentDetailsCell.m in Sources */,
 				532D70A11A5C054900770242 /* MJMTabbarButton.m in Sources */,
 				532D709E1A5C053800770242 /* MJMTabbar.m in Sources */,
 				5F5C37B51A5BEF2000358678 /* main.m in Sources */,
@@ -561,6 +572,7 @@
 				5306AD151A5E1AC400313D4A /* ContentSelectionButton.m in Sources */,
 				532D70B41A5C0BDB00770242 /* UIImage+MJM.m in Sources */,
 				5306AD221A5E3C3A00313D4A /* ContentSelectionView.m in Sources */,
+				5306AD2E1A5EB4C500313D4A /* ContentDetailCellFrame.m in Sources */,
 				532D70761A5BF67100770242 /* MJMBaseController.m in Sources */,
 				532D708B1A5BFBF700770242 /* MJMTabbarController.m in Sources */,
 				5306AD161A5E1AC400313D4A /* ContentSelectionDetails.m in Sources */,

@@ -17,8 +17,6 @@
 
 @interface ContentSelectionDetails : UIView
 @property (nonatomic,strong) UIScrollView *details_tableview;
-@property (nonatomic,strong) UIScrollView *confirm_view;
 @property (nonatomic,strong) NSMutableArray *selbuttonArray;
-@property (nonatomic,strong) NSMutableArray *selbutton_nameArray;
 @property (nonatomic,weak) id<ContentSelectionDetailsDelegate> delegate;
 @end
