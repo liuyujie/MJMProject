@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5306ACF91A5CE38D00313D4A /* yellowArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 5306ACF81A5CE38D00313D4A /* yellowArrow.png */; };
+		5306ACFC1A5CF15900313D4A /* arraw.png in Resources */ = {isa = PBXBuildFile; fileRef = 5306ACFB1A5CF15900313D4A /* arraw.png */; };
+		5306ACFF1A5CF2CA00313D4A /* arrow_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 5306ACFE1A5CF2CA00313D4A /* arrow_gray.png */; };
+		5306AD071A5D442A00313D4A /* arrow_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5306AD061A5D442A00313D4A /* arrow_white.png */; };
+		5306AD091A5D483900313D4A /* navbar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 5306AD081A5D483900313D4A /* navbar_background.png */; };
+		5306AD0B1A5D4C4100313D4A /* content_selection_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 5306AD0A1A5D4C4100313D4A /* content_selection_arrow.png */; };
+		5306AD0D1A5D4FB100313D4A /* arrow_darkgray.png in Resources */ = {isa = PBXBuildFile; fileRef = 5306AD0C1A5D4FB100313D4A /* arrow_darkgray.png */; };
+		5306AD141A5E1AC400313D4A /* ContentSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5306AD0F1A5E1AC400313D4A /* ContentSelection.m */; };
+		5306AD151A5E1AC400313D4A /* ContentSelectionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5306AD111A5E1AC400313D4A /* ContentSelectionButton.m */; };
+		5306AD161A5E1AC400313D4A /* ContentSelectionDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 5306AD131A5E1AC400313D4A /* ContentSelectionDetails.m */; };
 		532D706F1A5BF34F00770242 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D70651A5BF34F00770242 /* AppDelegate.m */; };
 		532D70731A5BF52D00770242 /* WWSideslipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D70721A5BF52D00770242 /* WWSideslipViewController.m */; };
 		532D70761A5BF67100770242 /* MJMBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D70751A5BF67100770242 /* MJMBaseController.m */; };
@@ -44,6 +54,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5306ACF81A5CE38D00313D4A /* yellowArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowArrow.png; sourceTree = "<group>"; };
+		5306ACFB1A5CF15900313D4A /* arraw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arraw.png; sourceTree = "<group>"; };
+		5306ACFE1A5CF2CA00313D4A /* arrow_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_gray.png; sourceTree = "<group>"; };
+		5306AD061A5D442A00313D4A /* arrow_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_white.png; sourceTree = "<group>"; };
+		5306AD081A5D483900313D4A /* navbar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar_background.png; sourceTree = "<group>"; };
+		5306AD0A1A5D4C4100313D4A /* content_selection_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = content_selection_arrow.png; sourceTree = "<group>"; };
+		5306AD0C1A5D4FB100313D4A /* arrow_darkgray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_darkgray.png; sourceTree = "<group>"; };
+		5306AD0E1A5E1AC400313D4A /* ContentSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentSelection.h; sourceTree = "<group>"; };
+		5306AD0F1A5E1AC400313D4A /* ContentSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentSelection.m; sourceTree = "<group>"; };
+		5306AD101A5E1AC400313D4A /* ContentSelectionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentSelectionButton.h; sourceTree = "<group>"; };
+		5306AD111A5E1AC400313D4A /* ContentSelectionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentSelectionButton.m; sourceTree = "<group>"; };
+		5306AD121A5E1AC400313D4A /* ContentSelectionDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentSelectionDetails.h; sourceTree = "<group>"; };
+		5306AD131A5E1AC400313D4A /* ContentSelectionDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentSelectionDetails.m; sourceTree = "<group>"; };
 		532D70641A5BF34F00770242 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		532D70651A5BF34F00770242 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		532D70711A5BF52D00770242 /* WWSideslipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWSideslipViewController.h; sourceTree = "<group>"; };
@@ -180,6 +203,12 @@
 		532D705E1A5BF34F00770242 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5306AD0E1A5E1AC400313D4A /* ContentSelection.h */,
+				5306AD0F1A5E1AC400313D4A /* ContentSelection.m */,
+				5306AD101A5E1AC400313D4A /* ContentSelectionButton.h */,
+				5306AD111A5E1AC400313D4A /* ContentSelectionButton.m */,
+				5306AD121A5E1AC400313D4A /* ContentSelectionDetails.h */,
+				5306AD131A5E1AC400313D4A /* ContentSelectionDetails.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -321,6 +350,13 @@
 		532D70831A5BFB5800770242 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				5306AD0C1A5D4FB100313D4A /* arrow_darkgray.png */,
+				5306AD0A1A5D4C4100313D4A /* content_selection_arrow.png */,
+				5306AD081A5D483900313D4A /* navbar_background.png */,
+				5306AD061A5D442A00313D4A /* arrow_white.png */,
+				5306ACFE1A5CF2CA00313D4A /* arrow_gray.png */,
+				5306ACFB1A5CF15900313D4A /* arraw.png */,
+				5306ACF81A5CE38D00313D4A /* yellowArrow.png */,
 				532D70A21A5C089600770242 /* TabBar1.png */,
 				532D70A31A5C089600770242 /* TabBar1Sel.png */,
 				532D70A41A5C089600770242 /* TabBar2.png */,
@@ -354,12 +390,12 @@
 		5F5C37B11A5BEF2000358678 /* MJMProject */ = {
 			isa = PBXGroup;
 			children = (
+				5F5C37DB1A5BEF3D00358678 /* MJMPCH.pch */,
 				532D70561A5BF34E00770242 /* class */,
 				5F5C37C21A5BEF2000358678 /* Images.xcassets */,
 				5F5C37C41A5BEF2000358678 /* LaunchScreen.xib */,
 				5F5C37B91A5BEF2000358678 /* MJMProject.xcdatamodeld */,
 				5F5C37B21A5BEF2000358678 /* Supporting Files */,
-				5F5C37DB1A5BEF3D00358678 /* MJMPCH.pch */,
 			);
 			path = MJMProject;
 			sourceTree = "<group>";
@@ -470,10 +506,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5306AD0D1A5D4FB100313D4A /* arrow_darkgray.png in Resources */,
 				5F5C37C61A5BEF2000358678 /* LaunchScreen.xib in Resources */,
+				5306AD071A5D442A00313D4A /* arrow_white.png in Resources */,
+				5306ACFC1A5CF15900313D4A /* arraw.png in Resources */,
 				532D70B11A5C089600770242 /* TabBar4Sel.png in Resources */,
 				532D70AD1A5C089600770242 /* TabBar2Sel.png in Resources */,
 				5F5C37C31A5BEF2000358678 /* Images.xcassets in Resources */,
+				5306AD091A5D483900313D4A /* navbar_background.png in Resources */,
+				5306ACFF1A5CF2CA00313D4A /* arrow_gray.png in Resources */,
+				5306AD0B1A5D4C4100313D4A /* content_selection_arrow.png in Resources */,
+				5306ACF91A5CE38D00313D4A /* yellowArrow.png in Resources */,
 				532D70AE1A5C089600770242 /* TabBar3.png in Resources */,
 				532D70AF1A5C089600770242 /* TabBar3Sel.png in Resources */,
 				532D70B01A5C089600770242 /* TabBar4.png in Resources */,
@@ -503,9 +546,12 @@
 				5F5C37BB1A5BEF2000358678 /* MJMProject.xcdatamodeld in Sources */,
 				532D70821A5BF85200770242 /* MJMSettingController.m in Sources */,
 				532D707F1A5BF84400770242 /* MJMLunTanController.m in Sources */,
+				5306AD151A5E1AC400313D4A /* ContentSelectionButton.m in Sources */,
+				5306AD141A5E1AC400313D4A /* ContentSelection.m in Sources */,
 				532D70B41A5C0BDB00770242 /* UIImage+MJM.m in Sources */,
 				532D70761A5BF67100770242 /* MJMBaseController.m in Sources */,
 				532D708B1A5BFBF700770242 /* MJMTabbarController.m in Sources */,
+				5306AD161A5E1AC400313D4A /* ContentSelectionDetails.m in Sources */,
 				532D706F1A5BF34F00770242 /* AppDelegate.m in Sources */,
 				532D70731A5BF52D00770242 /* WWSideslipViewController.m in Sources */,
 				532D707C1A5BF83400770242 /* MJMContentController.m in Sources */,

@@ -14,10 +14,26 @@
 #define MJMWIDTH [UIScreen mainScreen].bounds.size.width
 #define MJMHEIGHT [UIScreen mainScreen].bounds.size.height
 
-
 //font
-#define font_tabbar 10
+#define tabbar_font           [UIFont systemFontOfSize:10]
+#define tabbar_selection_font [UIFont systemFontOfSize:13]
 
 //color
+#define tabbar_blue       [UIColor colorWithRed:54.0/255 green:158.0/255 blue:235.0/255 alpha:1]
+#define tabbar_buttongray [UIColor colorWithRed: 80.0/255 green:80.0/255 blue:80.0/255 alpha:1]
+#define font_gray         [UIColor colorWithRed: 120.0/255 green:120.0/255 blue:120.0/255 alpha:1]
+#define content_bgcolor   [UIColor colorWithRed: 252.0/255 green:252.0/255 blue:252.0/255 alpha:1]
+#define tabbar_hudgray    [UIColor colorWithRed: 240.0/255 green:240.0/255 blue:240.0/255 alpha:1]
+#define line_gray         [UIColor colorWithRed: 230.0/255 green:230.0/255 blue:230.0/255 alpha:1]
+#define gold              [UIColor colorWithRed: 252.0/255 green:185.0/255 blue:46.0/255 alpha:1]
+#define content_color     [UIColor colorWithRed: 223.0/255 green:35.0/255 blue:31.0/255 alpha:1]
+#define main_color     [UIColor colorWithRed: 178.0/255 green:21.0/255 blue:48.0/255 alpha:1]
+
+
+//MJMcontent
+#define contentSelectionHeight 30
+#define content_selectionbutton_width 30
+#define content_viewshow_duration 0.5
+#define distanceBetweenButton 20
 
 #endif

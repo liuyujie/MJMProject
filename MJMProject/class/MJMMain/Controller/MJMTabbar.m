@@ -26,9 +26,10 @@
     [button setTitle:title forState:0];
     button.imageView.contentMode    = UIViewContentModeCenter;
     button.titleLabel.textAlignment = NSTextAlignmentCenter;
-    button.titleLabel.font          = [UIFont systemFontOfSize:font_tabbar];
+    button.titleLabel.font          = tabbar_font;
     [button.titleLabel setTintColor:[UIColor blueColor]];
     [button setTitleColor:[UIColor blackColor] forState:0];
+    [button setTitleColor:tabbar_blue forState:1 << 2];
     if (self.subviews.count == 0) {
         [self buttonClick:button];
     }

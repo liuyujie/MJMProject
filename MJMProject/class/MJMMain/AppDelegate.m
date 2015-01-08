@@ -22,6 +22,8 @@
     MJMTabbarController *base = [[MJMTabbarController alloc] init];
     
     [self.window setRootViewController:base];
+    
+     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
     return YES;
 }
 
