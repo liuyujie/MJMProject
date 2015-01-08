@@ -45,11 +45,6 @@
 
 -(void)selectionbtnDidClickedwithbutton:(ContentSelectionButton *)button
 {
-    [UIView animateWithDuration:content_viewshow_duration animations:^{
-        CGAffineTransform rotation = button.imageView.transform;
-        button.imageView.transform = CGAffineTransformRotate(rotation,M_PI);
-    }];
-    
     if ([self.delegate respondsToSelector:@selector(selectionbuttonDidClickedWithbutton:)]) {
         [self.delegate selectionbuttonDidClickedWithbutton:button];
     }

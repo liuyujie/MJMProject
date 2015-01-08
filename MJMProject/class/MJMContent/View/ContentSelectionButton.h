@@ -15,4 +15,5 @@
 @end
 @interface ContentSelectionButton : UIButton
 @property (nonatomic,weak) id<ContentSelectionButtonDelegate> delegate;
+
 @end

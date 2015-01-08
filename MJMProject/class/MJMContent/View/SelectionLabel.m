@@ -14,9 +14,7 @@
 {
     if ((int)self.tag == [[noti.userInfo objectForKey:@"select_index"] intValue]) {
         NSString *selec_name = [noti.userInfo objectForKey:@"select_name"];
-        NSString *selec_title = [noti.userInfo objectForKey:@"select_title"];
-        NSString *selection_click_string = [NSString stringWithFormat:@"%@/%@",selec_title,selec_name];
-        self.text = selection_click_string;
+        self.text = selec_name;
     }
 }
 @end
