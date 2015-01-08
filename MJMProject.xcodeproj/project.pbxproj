@@ -14,9 +14,12 @@
 		5306AD091A5D483900313D4A /* navbar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 5306AD081A5D483900313D4A /* navbar_background.png */; };
 		5306AD0B1A5D4C4100313D4A /* content_selection_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 5306AD0A1A5D4C4100313D4A /* content_selection_arrow.png */; };
 		5306AD0D1A5D4FB100313D4A /* arrow_darkgray.png in Resources */ = {isa = PBXBuildFile; fileRef = 5306AD0C1A5D4FB100313D4A /* arrow_darkgray.png */; };
-		5306AD141A5E1AC400313D4A /* ContentSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5306AD0F1A5E1AC400313D4A /* ContentSelection.m */; };
 		5306AD151A5E1AC400313D4A /* ContentSelectionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5306AD111A5E1AC400313D4A /* ContentSelectionButton.m */; };
 		5306AD161A5E1AC400313D4A /* ContentSelectionDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 5306AD131A5E1AC400313D4A /* ContentSelectionDetails.m */; };
+		5306AD1C1A5E299800313D4A /* UIButton+MJM.m in Sources */ = {isa = PBXBuildFile; fileRef = 5306AD1B1A5E299800313D4A /* UIButton+MJM.m */; };
+		5306AD1F1A5E324500313D4A /* SelectionDetailsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5306AD1E1A5E324500313D4A /* SelectionDetailsData.m */; };
+		5306AD221A5E3C3A00313D4A /* ContentSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5306AD211A5E3C3A00313D4A /* ContentSelectionView.m */; };
+		5306AD251A5E3D5E00313D4A /* SelectionLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5306AD241A5E3D5E00313D4A /* SelectionLabel.m */; };
 		532D706F1A5BF34F00770242 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D70651A5BF34F00770242 /* AppDelegate.m */; };
 		532D70731A5BF52D00770242 /* WWSideslipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D70721A5BF52D00770242 /* WWSideslipViewController.m */; };
 		532D70761A5BF67100770242 /* MJMBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D70751A5BF67100770242 /* MJMBaseController.m */; };
@@ -61,12 +64,18 @@
 		5306AD081A5D483900313D4A /* navbar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar_background.png; sourceTree = "<group>"; };
 		5306AD0A1A5D4C4100313D4A /* content_selection_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = content_selection_arrow.png; sourceTree = "<group>"; };
 		5306AD0C1A5D4FB100313D4A /* arrow_darkgray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_darkgray.png; sourceTree = "<group>"; };
-		5306AD0E1A5E1AC400313D4A /* ContentSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentSelection.h; sourceTree = "<group>"; };
-		5306AD0F1A5E1AC400313D4A /* ContentSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentSelection.m; sourceTree = "<group>"; };
 		5306AD101A5E1AC400313D4A /* ContentSelectionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentSelectionButton.h; sourceTree = "<group>"; };
 		5306AD111A5E1AC400313D4A /* ContentSelectionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentSelectionButton.m; sourceTree = "<group>"; };
 		5306AD121A5E1AC400313D4A /* ContentSelectionDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentSelectionDetails.h; sourceTree = "<group>"; };
 		5306AD131A5E1AC400313D4A /* ContentSelectionDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentSelectionDetails.m; sourceTree = "<group>"; };
+		5306AD1A1A5E299800313D4A /* UIButton+MJM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+MJM.h"; sourceTree = "<group>"; };
+		5306AD1B1A5E299800313D4A /* UIButton+MJM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+MJM.m"; sourceTree = "<group>"; };
+		5306AD1D1A5E324500313D4A /* SelectionDetailsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionDetailsData.h; sourceTree = "<group>"; };
+		5306AD1E1A5E324500313D4A /* SelectionDetailsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionDetailsData.m; sourceTree = "<group>"; };
+		5306AD201A5E3C3A00313D4A /* ContentSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentSelectionView.h; sourceTree = "<group>"; };
+		5306AD211A5E3C3A00313D4A /* ContentSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentSelectionView.m; sourceTree = "<group>"; };
+		5306AD231A5E3D5E00313D4A /* SelectionLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionLabel.h; sourceTree = "<group>"; };
+		5306AD241A5E3D5E00313D4A /* SelectionLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionLabel.m; sourceTree = "<group>"; };
 		532D70641A5BF34F00770242 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		532D70651A5BF34F00770242 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		532D70711A5BF52D00770242 /* WWSideslipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWSideslipViewController.h; sourceTree = "<group>"; };
@@ -196,6 +205,8 @@
 		532D705D1A5BF34F00770242 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5306AD1D1A5E324500313D4A /* SelectionDetailsData.h */,
+				5306AD1E1A5E324500313D4A /* SelectionDetailsData.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -203,12 +214,14 @@
 		532D705E1A5BF34F00770242 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5306AD0E1A5E1AC400313D4A /* ContentSelection.h */,
-				5306AD0F1A5E1AC400313D4A /* ContentSelection.m */,
 				5306AD101A5E1AC400313D4A /* ContentSelectionButton.h */,
 				5306AD111A5E1AC400313D4A /* ContentSelectionButton.m */,
 				5306AD121A5E1AC400313D4A /* ContentSelectionDetails.h */,
 				5306AD131A5E1AC400313D4A /* ContentSelectionDetails.m */,
+				5306AD201A5E3C3A00313D4A /* ContentSelectionView.h */,
+				5306AD211A5E3C3A00313D4A /* ContentSelectionView.m */,
+				5306AD231A5E3D5E00313D4A /* SelectionLabel.h */,
+				5306AD241A5E3D5E00313D4A /* SelectionLabel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -334,6 +347,8 @@
 			children = (
 				532D70B21A5C0BDB00770242 /* UIImage+MJM.h */,
 				532D70B31A5C0BDB00770242 /* UIImage+MJM.m */,
+				5306AD1A1A5E299800313D4A /* UIButton+MJM.h */,
+				5306AD1B1A5E299800313D4A /* UIButton+MJM.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -545,10 +560,13 @@
 				5F5C37B51A5BEF2000358678 /* main.m in Sources */,
 				5F5C37BB1A5BEF2000358678 /* MJMProject.xcdatamodeld in Sources */,
 				532D70821A5BF85200770242 /* MJMSettingController.m in Sources */,
+				5306AD251A5E3D5E00313D4A /* SelectionLabel.m in Sources */,
+				5306AD1F1A5E324500313D4A /* SelectionDetailsData.m in Sources */,
 				532D707F1A5BF84400770242 /* MJMLunTanController.m in Sources */,
 				5306AD151A5E1AC400313D4A /* ContentSelectionButton.m in Sources */,
-				5306AD141A5E1AC400313D4A /* ContentSelection.m in Sources */,
 				532D70B41A5C0BDB00770242 /* UIImage+MJM.m in Sources */,
+				5306AD221A5E3C3A00313D4A /* ContentSelectionView.m in Sources */,
+				5306AD1C1A5E299800313D4A /* UIButton+MJM.m in Sources */,
 				532D70761A5BF67100770242 /* MJMBaseController.m in Sources */,
 				532D708B1A5BFBF700770242 /* MJMTabbarController.m in Sources */,
 				5306AD161A5E1AC400313D4A /* ContentSelectionDetails.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "ContentSelectionDetails.h"
+#import "SelectionDetailsData.h"
 
 @interface ContentSelectionDetails()
 {
@@ -33,21 +34,30 @@
     return _selbuttonArray;
 }
 
-
+-(NSMutableArray *)selbutton_nameArray
+{
+    if (_selbutton_nameArray == nil) {
+        _selbutton_nameArray = [NSMutableArray array];
+    }
+    return _selbutton_nameArray;
+}
 -(void)makeDetailsviewWithframe:(CGRect)frame;
 {
     max_y = 0;
     self.frame = frame;
     _details_tableview = [[UIScrollView alloc] initWithFrame:CGRectMake(0,0,MJMWIDTH,0)];
-
     
-    NSArray *array1 = @[@"科幻",@"科幻",@"科幻",@"科幻",@"科幻",@"科幻",@"科幻",@"科幻",@"科幻",@"科幻",@"科幻",@"科幻",@"科幻"];
-    NSArray *array2 = @[@"2015",@"2015",@"2015",@"2015",@"2015",@"2015",@"2015"];
-    NSArray *array3 = @[@"最新",@"最新",@"最新",@"最新",@"最新"];
+    SelectionDetailsData *data = [[SelectionDetailsData alloc] init];
+    NSMutableArray *data_array = [data makeSelectionDetailsData];
     
-    [self makeDetailscontentWitharray:array1 type:@"美剧类型" fatherview:_details_tableview positionY:max_y index:0];
-    [self makeDetailscontentWitharray:array2 type:@"首发时间" fatherview:_details_tableview positionY:max_y index:1];
-    [self makeDetailscontentWitharray:array3 type:@"程度" fatherview:_details_tableview positionY:max_y index:2];
+    for (int i=0; i<data_array.count; i++) {
+        NSMutableDictionary *dictionary = data_array[i];
+        NSArray *dic_data = [dictionary objectForKey:@"selection_data"];
+        NSString *dic_detailtitle = [dictionary objectForKey:@"selection_detailtitle"];
+         NSString *dic_title = [dictionary objectForKey:@"selection_title"];
+        [self.selbutton_nameArray addObject:dic_title];
+        [self makeDetailscontentWitharray:dic_data type:dic_detailtitle fatherview:_details_tableview positionY:max_y index:i];
+    }
     _details_tableview.contentSize = CGSizeMake(MJMWIDTH, max_y+200);
     [self addSubview:_details_tableview];
 }
@@ -67,7 +77,7 @@
     line_view.backgroundColor = line_gray;
     [details_view addSubview:line_view];
     
-    CGFloat rows = array.count/4 +1;
+    CGFloat rows = (array.count-1)/4 +1;
     UIView *content_view = [[UIView alloc] init];
     content_view.frame = CGRectMake(0, CGRectGetMaxY(line_view.frame) + 5, MJMWIDTH, rows*30);
     for (int i=0; i<array.count; i++) {
@@ -92,6 +102,7 @@
         [content_single_button addTarget:self
                                   action:@selector(detailscontentbuttonClicked:)
                         forControlEvents:1 << 6];
+        
         [content_view addSubview:content_single_button];
     }
     [details_view addSubview:content_view];
@@ -105,8 +116,17 @@
     [_selbuttonArray[button.tag] setBackgroundColor:[UIColor whiteColor]];
     [_selbuttonArray[button.tag] setTitleColor:font_gray forState:0];
     _selbuttonArray[button.tag] = button;
+    
     [button setBackgroundColor:main_color];
     [button setTitleColor:[UIColor whiteColor] forState:0];
+    
+    NSString *tagString = [NSString stringWithFormat:@"%d",(int)button.tag];
+    NSString *selec_title = _selbutton_nameArray[button.tag];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"selection_button_click"
+                                                        object:button
+                                                      userInfo:@{@"select_name":button.titleLabel.text,
+                                                                 @"select_index":tagString,
+                                                                 @"select_title":selec_title}];
 }
 
 

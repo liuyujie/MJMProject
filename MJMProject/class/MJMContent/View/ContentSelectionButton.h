@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ContentSelectionButton;
+@protocol ContentSelectionButtonDelegate <NSObject>
 
+@optional
+-(void)selectionbuttonDidClickedWithbutton:(ContentSelectionButton *)button;
+@end
 @interface ContentSelectionButton : UIButton
-
+@property (nonatomic,weak) id<ContentSelectionButtonDelegate> delegate;
 @end

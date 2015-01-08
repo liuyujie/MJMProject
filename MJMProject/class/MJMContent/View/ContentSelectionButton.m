@@ -7,6 +7,7 @@
 //
 
 #import "ContentSelectionButton.h"
+#import "UIImage+MJM.h"
 
 @interface ContentSelectionButton()
 @end
@@ -16,13 +17,9 @@
 - (id)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        [self setup];
+        [self makeSelectionbuttonWithframe:frame];
     }
     return self;
-}
-- (void)setup
-{
-    self.imageView.contentMode = UIViewContentModeCenter;
 }
 
 - (CGRect)imageRectForContentRect:(CGRect)contentRect
@@ -32,5 +29,29 @@
     CGFloat imageH = imageW;
     CGFloat imageY = 5;
     return CGRectMake(imageX, imageY, imageW, imageH);
+}
+
+-(void)makeSelectionbuttonWithframe:(CGRect)frame
+{
+    self.frame = frame;
+    [self setBackgroundColor:tabbar_hudgray];
+    [self setImage:[UIImage resizedImageWithName:@"arrow_darkgray.png"] forState:0];
+    [self setImage:[UIImage resizedImageWithName:@"arrow_darkgray.png"] forState:1 << 0];
+    self.imageView.contentMode = UIViewContentModeCenter;
+    [self addTarget:self
+               action:@selector(selectionbtnDidClickedwithbutton:)
+     forControlEvents:1 << 6];
+}
+
+-(void)selectionbtnDidClickedwithbutton:(ContentSelectionButton *)button
+{
+    [UIView animateWithDuration:content_viewshow_duration animations:^{
+        CGAffineTransform rotation = button.imageView.transform;
+        button.imageView.transform = CGAffineTransformRotate(rotation,M_PI);
+    }];
+    
+    if ([self.delegate respondsToSelector:@selector(selectionbuttonDidClickedWithbutton:)]) {
+        [self.delegate selectionbuttonDidClickedWithbutton:button];
+    }
 }
 @end

@@ -9,9 +9,13 @@
 #import "ContentSelection.h"
 #import "ContentSelectionButton.h"
 #import "UIImage+MJM.h"
+#import "ContentSelectionDetails.h"
+#import "SelectionDetailsData.h"
+
+@interface ContentSelection()
+@end
 
 @implementation ContentSelection
-
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -26,17 +30,25 @@
     UIView *content_mainV = [[UIView alloc] initWithFrame:frame];
     content_mainV.backgroundColor = tabbar_hudgray;
     CGFloat buttonWidth = (MJMWIDTH - content_selectionbutton_width) / 3;
-    NSArray *titlearray = @[@"类型/科幻",@"热度/点击最多",@"时间/2015"];
+    
+    SelectionDetailsData *data = [[SelectionDetailsData alloc] init];
+    NSMutableArray *titlearray = [data makeSelectionData];
+    
     NSInteger typeNum = titlearray.count;
     for (int i = 0; i < typeNum; i++)
     {
-        [self makeContentselectionbuttonWithtitle:titlearray[i] index:i buttonWidth:buttonWidth fatherView:content_mainV];
+        UIButton *button = [self makeContentselectionbuttonWithtitle:titlearray[i] index:i buttonWidth:buttonWidth];
+        [[NSNotificationCenter defaultCenter] addObserver:button
+                                                 selector:@selector(selectionClicked:)
+                                                     name:@"selection_button_click"
+                                                   object:nil];
+        [content_mainV addSubview:button];
     }
     [self addSubview:content_mainV];
 }
 
 
--(void)makeContentselectionbuttonWithtitle:(NSString *)title index:(NSInteger)index buttonWidth:(CGFloat)width fatherView:(UIView *)fatherView
+-(UIButton *)makeContentselectionbuttonWithtitle:(NSString *)title index:(NSInteger)index buttonWidth:(CGFloat)width
 {
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(index * width, 0, width, contentSelectionHeight)];
     [button setTitle:title forState:0];
@@ -44,14 +56,8 @@
     [button setTitleColor:tabbar_buttongray forState:0];
     [button.titleLabel setFont:tabbar_selection_font];
     [button setTag:index];
-    [fatherView addSubview:button];
+    return button;
 }
 
--(void)selectionbuttonClickedWithButton:(ContentSelectionButton *)button
-{
-    
-    if ([self.delegate respondsToSelector:@selector(selectionbuttonDidClicked)]) {
-        [self.delegate selectionbuttonDidClicked];
-    }
-}
+
 @end
