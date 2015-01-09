@@ -18,7 +18,7 @@
     NSArray *array1 = @[@"科幻",@"爱情",@"乡村",@"喜剧",@"恐怖",@"刑侦",@"家庭",@"家庭"];
     NSString *array1_title = @"美剧类型";
     NSString *array1_title_simple = @"类型";
-    NSArray *array2 = @[@"2015",@"2014",@"2013",@"2012",@"2011",@"2010",@"2009"];
+    NSArray *array2 = @[@"2015",@"2014",@"2013",@"2012",@"2011",@"2010",@"2009",@"点击最多"];
     NSString *array2_title = @"首播时间";
     NSString *array2_title_simple = @"时间";
     NSArray *array3 = @[@"最新",@"最热",@"点击最多"];

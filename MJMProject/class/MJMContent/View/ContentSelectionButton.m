@@ -27,7 +27,7 @@
     CGFloat imageW = 20;
     CGFloat imageX = 5;
     CGFloat imageH = imageW;
-    CGFloat imageY = 5;
+    CGFloat imageY = (self.frame.size.height - imageH)/2;
     return CGRectMake(imageX, imageY, imageW, imageH);
 }
 

@@ -62,11 +62,11 @@ selectionView 的主标题和副标题
     label.text = label_title;
     label.font = [UIFont systemFontOfSize:12];
     label.textAlignment = NSTextAlignmentCenter;
-    label.frame = CGRectMake(10, 0, labelWidth, 30);
+    label.frame = CGRectMake(10, 0, labelWidth, contentSelectionHeight);
     [selec_button addSubview:label];
     
     CGFloat sublabelX = CGRectGetMaxX(label.frame)+5;
-    SelectionLabel *sublabel = [[SelectionLabel alloc] initWithFrame:CGRectMake(sublabelX-5, 0.8,btnWidth-sublabelX, 30)];
+    SelectionLabel *sublabel = [[SelectionLabel alloc] initWithFrame:CGRectMake(sublabelX-5, 0.8,btnWidth-sublabelX, contentSelectionHeight)];
     sublabel.font = [UIFont systemFontOfSize:11];
     sublabel.text = firstdata;
     sublabel.tag = index;

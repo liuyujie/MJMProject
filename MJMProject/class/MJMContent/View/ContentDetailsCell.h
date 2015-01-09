@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ContentDetailsCell : UITableViewCell
--(void)makeContentdetailscell;
+-(void)makeContentdetailscellWithDic:(NSMutableDictionary *)dic;
 @end

@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface ContentDetailCellFrame : NSObject
--(NSInteger)calculateContentcellFrame;
+-(NSInteger)calculateContentcellFrameWithDatadic:(NSMutableDictionary *)dic;
 @end

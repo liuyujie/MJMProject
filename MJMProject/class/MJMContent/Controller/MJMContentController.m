@@ -13,6 +13,7 @@
 #import "ContentSelectionView.h"
 #import "ContentDetailsCell.h"
 #import "ContentDetailCellFrame.h"
+#import "CellData.h"
 
 @interface MJMContentController ()<ContentSelectionButtonDelegate,ContentSelectionDetailsDelegate,UITableViewDelegate,UITableViewDataSource>
 {
@@ -20,12 +21,24 @@
     ContentSelectionButton *selec_button;
     BOOL isset;//是否已经出现selection view
 }
+@property (nonatomic,strong) NSMutableArray *data_array;
 @end
 
 @implementation MJMContentController
 
+-(NSMutableArray *)data_array
+{
+    if (_data_array == nil) {
+        _data_array = [NSMutableArray array];
+    }
+    return _data_array;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    CellData *data = [[CellData alloc] init];
+    _data_array = [data makeCelldatawithoptions:nil];
     
     ContentSelectionButton *selection_button = [[ContentSelectionButton alloc] initWithFrame:CGRectMake(MJMWIDTH-content_selectionbutton_width, 0, content_selectionbutton_width, contentSelectionHeight)];
     selection_button.delegate = self;
@@ -49,7 +62,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    return _data_array.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -58,16 +71,15 @@
     ContentDetailsCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (cell==nil) {
         cell=[[ContentDetailsCell alloc] init];
-        [cell makeContentdetailscell];
+        [cell makeContentdetailscellWithDic:_data_array[indexPath.row]];
     }
     return cell;
-    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ContentDetailCellFrame *frame = [[ContentDetailCellFrame alloc] init];
-    return [frame calculateContentcellFrame];
+    return [frame calculateContentcellFrameWithDatadic:nil];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

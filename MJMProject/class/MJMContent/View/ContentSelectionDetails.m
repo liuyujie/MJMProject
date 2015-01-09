@@ -56,7 +56,7 @@
         NSString *dic_detailtitle = [dictionary objectForKey:@"selection_title"];
         [self makeDetailscontentWitharray:dic_data type:dic_detailtitle fatherview:_details_tableview positionY:max_y index:i];
     }
-    _details_tableview.contentSize = CGSizeMake(MJMWIDTH, max_y+1000);
+    _details_tableview.contentSize = CGSizeMake(MJMWIDTH, max_y);
     [self addSubview:_details_tableview];
     //confirem button
     [self makeConfirmbutton];

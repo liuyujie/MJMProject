@@ -21,6 +21,12 @@
 		5306AD251A5E3D5E00313D4A /* SelectionLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5306AD241A5E3D5E00313D4A /* SelectionLabel.m */; };
 		5306AD2B1A5EB30C00313D4A /* ContentDetailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5306AD2A1A5EB30C00313D4A /* ContentDetailsCell.m */; };
 		5306AD2E1A5EB4C500313D4A /* ContentDetailCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5306AD2D1A5EB4C500313D4A /* ContentDetailCellFrame.m */; };
+		532BBE561A5F781A00106366 /* WPAttributedStyleAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 532BBE511A5F781A00106366 /* WPAttributedStyleAction.m */; };
+		532BBE571A5F781A00106366 /* WPHotspotLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 532BBE531A5F781A00106366 /* WPHotspotLabel.m */; };
+		532BBE581A5F781A00106366 /* WPTappableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 532BBE551A5F781A00106366 /* WPTappableLabel.m */; };
+		532BBE5E1A5F782000106366 /* NSMutableString+TagReplace.m in Sources */ = {isa = PBXBuildFile; fileRef = 532BBE5B1A5F782000106366 /* NSMutableString+TagReplace.m */; };
+		532BBE5F1A5F782000106366 /* NSString+WPAttributedMarkup.m in Sources */ = {isa = PBXBuildFile; fileRef = 532BBE5D1A5F782000106366 /* NSString+WPAttributedMarkup.m */; };
+		532BBE621A5FC76700106366 /* CellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 532BBE611A5FC76700106366 /* CellData.m */; };
 		532D706F1A5BF34F00770242 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D70651A5BF34F00770242 /* AppDelegate.m */; };
 		532D70731A5BF52D00770242 /* WWSideslipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D70721A5BF52D00770242 /* WWSideslipViewController.m */; };
 		532D70761A5BF67100770242 /* MJMBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D70751A5BF67100770242 /* MJMBaseController.m */; };
@@ -79,6 +85,18 @@
 		5306AD2A1A5EB30C00313D4A /* ContentDetailsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentDetailsCell.m; sourceTree = "<group>"; };
 		5306AD2C1A5EB4C500313D4A /* ContentDetailCellFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentDetailCellFrame.h; sourceTree = "<group>"; };
 		5306AD2D1A5EB4C500313D4A /* ContentDetailCellFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentDetailCellFrame.m; sourceTree = "<group>"; };
+		532BBE501A5F781A00106366 /* WPAttributedStyleAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPAttributedStyleAction.h; sourceTree = "<group>"; };
+		532BBE511A5F781A00106366 /* WPAttributedStyleAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPAttributedStyleAction.m; sourceTree = "<group>"; };
+		532BBE521A5F781A00106366 /* WPHotspotLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPHotspotLabel.h; sourceTree = "<group>"; };
+		532BBE531A5F781A00106366 /* WPHotspotLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPHotspotLabel.m; sourceTree = "<group>"; };
+		532BBE541A5F781A00106366 /* WPTappableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPTappableLabel.h; sourceTree = "<group>"; };
+		532BBE551A5F781A00106366 /* WPTappableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPTappableLabel.m; sourceTree = "<group>"; };
+		532BBE5A1A5F782000106366 /* NSMutableString+TagReplace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+TagReplace.h"; sourceTree = "<group>"; };
+		532BBE5B1A5F782000106366 /* NSMutableString+TagReplace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+TagReplace.m"; sourceTree = "<group>"; };
+		532BBE5C1A5F782000106366 /* NSString+WPAttributedMarkup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WPAttributedMarkup.h"; sourceTree = "<group>"; };
+		532BBE5D1A5F782000106366 /* NSString+WPAttributedMarkup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WPAttributedMarkup.m"; sourceTree = "<group>"; };
+		532BBE601A5FC76700106366 /* CellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellData.h; sourceTree = "<group>"; };
+		532BBE611A5FC76700106366 /* CellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellData.m; sourceTree = "<group>"; };
 		532D70641A5BF34F00770242 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		532D70651A5BF34F00770242 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		532D70711A5BF52D00770242 /* WWSideslipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWSideslipViewController.h; sourceTree = "<group>"; };
@@ -139,6 +157,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		532BBE4F1A5F781A00106366 /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				532BBE501A5F781A00106366 /* WPAttributedStyleAction.h */,
+				532BBE511A5F781A00106366 /* WPAttributedStyleAction.m */,
+				532BBE521A5F781A00106366 /* WPHotspotLabel.h */,
+				532BBE531A5F781A00106366 /* WPHotspotLabel.m */,
+				532BBE541A5F781A00106366 /* WPTappableLabel.h */,
+				532BBE551A5F781A00106366 /* WPTappableLabel.m */,
+			);
+			path = Extras;
+			sourceTree = "<group>";
+		};
+		532BBE591A5F782000106366 /* WPAttributedMarkup */ = {
+			isa = PBXGroup;
+			children = (
+				532BBE5A1A5F782000106366 /* NSMutableString+TagReplace.h */,
+				532BBE5B1A5F782000106366 /* NSMutableString+TagReplace.m */,
+				532BBE5C1A5F782000106366 /* NSString+WPAttributedMarkup.h */,
+				532BBE5D1A5F782000106366 /* NSString+WPAttributedMarkup.m */,
+			);
+			path = WPAttributedMarkup;
+			sourceTree = "<group>";
+		};
 		532D70561A5BF34E00770242 /* class */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +252,8 @@
 			children = (
 				5306AD1D1A5E324500313D4A /* SelectionDetailsData.h */,
 				5306AD1E1A5E324500313D4A /* SelectionDetailsData.m */,
+				532BBE601A5FC76700106366 /* CellData.h */,
+				532BBE611A5FC76700106366 /* CellData.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -343,6 +387,7 @@
 		532D706D1A5BF34F00770242 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				532BBE4F1A5F781A00106366 /* Extras */,
 				532D70701A5BF52D00770242 /* WWSideslipViewControllerClass */,
 				532D706E1A5BF34F00770242 /* Category */,
 			);
@@ -352,6 +397,7 @@
 		532D706E1A5BF34F00770242 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				532BBE591A5F782000106366 /* WPAttributedMarkup */,
 				532D70B21A5C0BDB00770242 /* UIImage+MJM.h */,
 				532D70B31A5C0BDB00770242 /* UIImage+MJM.m */,
 			);
@@ -562,21 +608,27 @@
 			files = (
 				5306AD2B1A5EB30C00313D4A /* ContentDetailsCell.m in Sources */,
 				532D70A11A5C054900770242 /* MJMTabbarButton.m in Sources */,
+				532BBE561A5F781A00106366 /* WPAttributedStyleAction.m in Sources */,
 				532D709E1A5C053800770242 /* MJMTabbar.m in Sources */,
+				532BBE5F1A5F782000106366 /* NSString+WPAttributedMarkup.m in Sources */,
 				5F5C37B51A5BEF2000358678 /* main.m in Sources */,
 				5F5C37BB1A5BEF2000358678 /* MJMProject.xcdatamodeld in Sources */,
+				532BBE581A5F781A00106366 /* WPTappableLabel.m in Sources */,
 				532D70821A5BF85200770242 /* MJMSettingController.m in Sources */,
 				5306AD251A5E3D5E00313D4A /* SelectionLabel.m in Sources */,
 				5306AD1F1A5E324500313D4A /* SelectionDetailsData.m in Sources */,
 				532D707F1A5BF84400770242 /* MJMLunTanController.m in Sources */,
 				5306AD151A5E1AC400313D4A /* ContentSelectionButton.m in Sources */,
+				532BBE621A5FC76700106366 /* CellData.m in Sources */,
 				532D70B41A5C0BDB00770242 /* UIImage+MJM.m in Sources */,
 				5306AD221A5E3C3A00313D4A /* ContentSelectionView.m in Sources */,
 				5306AD2E1A5EB4C500313D4A /* ContentDetailCellFrame.m in Sources */,
 				532D70761A5BF67100770242 /* MJMBaseController.m in Sources */,
 				532D708B1A5BFBF700770242 /* MJMTabbarController.m in Sources */,
 				5306AD161A5E1AC400313D4A /* ContentSelectionDetails.m in Sources */,
+				532BBE571A5F781A00106366 /* WPHotspotLabel.m in Sources */,
 				532D706F1A5BF34F00770242 /* AppDelegate.m in Sources */,
+				532BBE5E1A5F782000106366 /* NSMutableString+TagReplace.m in Sources */,
 				532D70731A5BF52D00770242 /* WWSideslipViewController.m in Sources */,
 				532D707C1A5BF83400770242 /* MJMContentController.m in Sources */,
 				532D70791A5BF82600770242 /* MJMContactController.m in Sources */,
