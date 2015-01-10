@@ -25,7 +25,8 @@
 #define font_gray         [UIColor colorWithRed: 120.0/255 green:120.0/255 blue:120.0/255 alpha:1]
 #define gray_person       [UIColor colorWithRed: 102.0/255 green:102.0/255 blue:102.0/255 alpha:1]
 #define content_bgcolor   [UIColor colorWithRed: 252.0/255 green:252.0/255 blue:252.0/255 alpha:1]
-#define tabbar_hudgray    [UIColor colorWithRed: 240.0/255 green:240.0/255 blue:240.0/255 alpha:1]
+#define gray_comment      [UIColor colorWithRed: 248.0/255 green:248.0/255 blue:248.0/255 alpha:0.8]
+#define tabbar_hudgray    [UIColor colorWithRed: 237.0/255 green:237.0/255 blue:237.0/255 alpha:1]
 #define line_gray         [UIColor colorWithRed: 230.0/255 green:230.0/255 blue:230.0/255 alpha:1]
 
 #define gold              [UIColor colorWithRed: 252.0/255 green:185.0/255 blue:46.0/255 alpha:1]
@@ -38,12 +39,7 @@
 //MJMcontent
 #define contentSelectionHeight 25
 #define content_selectionbutton_width 30
-#define confirm_button_height 30
 #define content_viewshow_duration 0.6
-#define distanceBetweenButton 20
-#define shadowHeight 30
-#define font_contentmaintitle 18
-#define font_contentsubtitle 15
-#define font_cellmain 11
+#define font_Main 11
 
 #endif

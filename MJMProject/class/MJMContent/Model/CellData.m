@@ -8,14 +8,20 @@
 
 #import "CellData.h"
 
+@interface CellData()
+@property (nonatomic,strong) NSMutableArray *list_array;
+@end
+
 @implementation CellData
+
 -(NSMutableArray *)makeCelldatawithoptions:(NSArray *)options
 {
     NSMutableArray *all_array = [[NSMutableArray alloc] init];
     
-    for (int i=0; i<5; i++) {
+    
+    for (int i=0; i<3; i++) {
         NSMutableDictionary *sub_dic = [[NSMutableDictionary alloc] init];
-        
+        NSMutableArray *list_array = [[NSMutableArray alloc] init];
         /***************
          
          美剧名称
@@ -38,7 +44,7 @@
          
          ***************/
         NSMutableDictionary *directors_dic = [[NSMutableDictionary alloc] init];
-        directors_dic = [self makedicWithproperty:@"导演" value:nil values:@[@"彼得 斯派瑞",@"彼得 斯派瑞",@"彼得 斯派瑞"]];
+        directors_dic = [self makedicWithproperty:@"导演" value:nil values:@[@"彼得 斯派瑞",@"彼得 斯派",@"卡类 斯派瑞",@"彼得 斯派瑞",@"彼得 斯派瑞"]];
         [sub_dic setObject:directors_dic forKey:@"head_directors"];
         
         /***************
@@ -95,6 +101,7 @@
         state_dic = [self makedicWithproperty:@"状态" value:@"播出中" values:nil];
         [sub_dic setObject:state_dic forKey:@"head_state"];
         
+        _list_array = list_array;
         [all_array addObject:sub_dic];
     }
     return all_array;

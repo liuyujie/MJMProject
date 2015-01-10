@@ -20,6 +20,7 @@
     ContentSelectionDetails *selection_detailsView;
     ContentSelectionButton *selec_button;
     BOOL isset;//是否已经出现selection view
+    NSArray *list_array;
 }
 @property (nonatomic,strong) NSMutableArray *data_array;
 @end
@@ -40,7 +41,7 @@
     CellData *data = [[CellData alloc] init];
     _data_array = [data makeCelldatawithoptions:nil];
     
-    ContentSelectionButton *selection_button = [[ContentSelectionButton alloc] initWithFrame:CGRectMake(MJMWIDTH-content_selectionbutton_width, 0, content_selectionbutton_width, contentSelectionHeight)];
+    ContentSelectionButton *selection_button = [[ContentSelectionButton alloc] initWithFrame:CGRectMake(MJMWIDTH-content_selectionbutton_width, 0, content_selectionbutton_width, contentSelectionHeight-1)];
     selection_button.delegate = self;
     selec_button = selection_button;
     [self.view addSubview:selec_button];
@@ -57,6 +58,8 @@
     UITableView *tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, contentSelectionHeight, MJMWIDTH, MJMHEIGHT-contentSelectionHeight)];
     tableview.delegate = self;
     tableview.dataSource = self;
+    tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
+    tableview.backgroundColor = tabbar_hudgray;
     [self.view insertSubview:tableview belowSubview:selection_details];
 }
 
@@ -72,6 +75,10 @@
     if (cell==nil) {
         cell=[[ContentDetailsCell alloc] init];
         [cell makeContentdetailscellWithDic:_data_array[indexPath.row]];
+        
+        UIView *backgroundView = [[UIView alloc]initWithFrame:cell.frame];
+        backgroundView.backgroundColor = tabbar_hudgray;
+        cell.selectedBackgroundView = backgroundView;
     }
     return cell;
 }
@@ -79,7 +86,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ContentDetailCellFrame *frame = [[ContentDetailCellFrame alloc] init];
-    return [frame calculateContentcellFrameWithDatadic:nil];
+    return [frame calculateContentcellFrameWithDatadic:_data_array[indexPath.row]];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

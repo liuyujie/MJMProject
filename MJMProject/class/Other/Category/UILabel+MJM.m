@@ -1,14 +1,30 @@
 //
-//  SelectionLabel.m
+//  UILabel+MJM.m
 //  MJMProject
 //
-//  Created by bassamyan on 15/1/8.
+//  Created by bassamyan on 15/1/10.
 //  Copyright (c) 2015年 apple. All rights reserved.
 //
 
-#import "SelectionLabel.h"
+#import "UILabel+MJM.h"
 
-@implementation SelectionLabel
+@implementation UILabel (MJM)
+-(void)labelWithlabel:(UILabel *)label frame:(CGRect)frame font:(CGFloat)font text:(NSString *)text textColor:(UIColor *)textColor fatherView:(UIView *)fatherView
+{
+    label.frame = frame;
+    label.font = [UIFont systemFontOfSize:font];
+    label.textColor = textColor;
+    label.text = text;
+    label.textAlignment = NSTextAlignmentLeft;
+    [fatherView addSubview:label];
+}
+
+-(void)attitudeButtonClicked:(NSNotification *)noti
+{
+    if (self.tag == [[noti.userInfo objectForKey:@"attitude_btn"] integerValue]) {
+        self.text = [NSString stringWithFormat:@"%d",[self.text intValue]+1];
+    }
+}
 
 -(void)selectionClicked:(NSNotification *)noti
 {

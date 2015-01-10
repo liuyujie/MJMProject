@@ -24,7 +24,7 @@
 
 - (CGRect)imageRectForContentRect:(CGRect)contentRect
 {
-    CGFloat imageW = 20;
+    CGFloat imageW = 15;
     CGFloat imageX = 5;
     CGFloat imageH = imageW;
     CGFloat imageY = (self.frame.size.height - imageH)/2;
@@ -34,9 +34,9 @@
 -(void)makeSelectionbuttonWithframe:(CGRect)frame
 {
     self.frame = frame;
-    [self setBackgroundColor:tabbar_hudgray];
-    [self setImage:[UIImage resizedImageWithName:@"arrow_darkgray.png"] forState:0];
-    [self setImage:[UIImage resizedImageWithName:@"arrow_darkgray.png"] forState:1 << 0];
+    [self setBackgroundColor:[UIColor clearColor]];
+    [self setImage:[UIImage resizedImageWithName:@"arrow_mainColor.png"] forState:0];
+    [self setImage:[UIImage resizedImageWithName:@"arrow_mainColor.png"] forState:1 << 0];
     self.imageView.contentMode = UIViewContentModeCenter;
     [self addTarget:self
                action:@selector(selectionbtnDidClickedwithbutton:)
