@@ -60,6 +60,9 @@
 		53BB39721A6391780076A623 /* content_more.png in Resources */ = {isa = PBXBuildFile; fileRef = 53BB39711A6391780076A623 /* content_more.png */; };
 		53BB39741A63932A0076A623 /* content_moreArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 53BB39731A63932A0076A623 /* content_moreArrow.png */; };
 		53BB39761A6394780076A623 /* content_selectionview_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 53BB39751A6394780076A623 /* content_selectionview_arrow.png */; };
+		53DA802B1A63D67A00697940 /* SelectionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DA802A1A63D67A00697940 /* SelectionButton.m */; };
+		53DA802E1A64174000697940 /* MJMContentMoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DA802D1A64174000697940 /* MJMContentMoreController.m */; };
+		53DA80311A642CAA00697940 /* DramaSingleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DA80301A642CAA00697940 /* DramaSingleView.m */; };
 		5F5C37B51A5BEF2000358678 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C37B41A5BEF2000358678 /* main.m */; };
 		5F5C37BB1A5BEF2000358678 /* MJMProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C37B91A5BEF2000358678 /* MJMProject.xcdatamodeld */; };
 		5F5C37C31A5BEF2000358678 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C37C21A5BEF2000358678 /* Images.xcassets */; };
@@ -161,6 +164,12 @@
 		53BB39711A6391780076A623 /* content_more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = content_more.png; sourceTree = "<group>"; };
 		53BB39731A63932A0076A623 /* content_moreArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = content_moreArrow.png; sourceTree = "<group>"; };
 		53BB39751A6394780076A623 /* content_selectionview_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = content_selectionview_arrow.png; sourceTree = "<group>"; };
+		53DA80291A63D67A00697940 /* SelectionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionButton.h; sourceTree = "<group>"; };
+		53DA802A1A63D67A00697940 /* SelectionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionButton.m; sourceTree = "<group>"; };
+		53DA802C1A64174000697940 /* MJMContentMoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMContentMoreController.h; sourceTree = "<group>"; };
+		53DA802D1A64174000697940 /* MJMContentMoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMContentMoreController.m; sourceTree = "<group>"; };
+		53DA802F1A642CAA00697940 /* DramaSingleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DramaSingleView.h; sourceTree = "<group>"; };
+		53DA80301A642CAA00697940 /* DramaSingleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DramaSingleView.m; sourceTree = "<group>"; };
 		5F5C37AF1A5BEF2000358678 /* MJMProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJMProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5C37B31A5BEF2000358678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F5C37B41A5BEF2000358678 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -277,6 +286,10 @@
 			children = (
 				532D707A1A5BF83400770242 /* MJMContentController.h */,
 				532D707B1A5BF83400770242 /* MJMContentController.m */,
+				53DA802C1A64174000697940 /* MJMContentMoreController.h */,
+				53DA802D1A64174000697940 /* MJMContentMoreController.m */,
+				53DA802F1A642CAA00697940 /* DramaSingleView.h */,
+				53DA80301A642CAA00697940 /* DramaSingleView.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -299,6 +312,8 @@
 			children = (
 				5306AD201A5E3C3A00313D4A /* ContentSelectionView.h */,
 				5306AD211A5E3C3A00313D4A /* ContentSelectionView.m */,
+				53DA80291A63D67A00697940 /* SelectionButton.h */,
+				53DA802A1A63D67A00697940 /* SelectionButton.m */,
 				53BB39591A62640A0076A623 /* SelectionHeadButton.h */,
 				53BB395A1A62640A0076A623 /* SelectionHeadButton.m */,
 				5306AD121A5E1AC400313D4A /* ContentSelectionDetails.h */,
@@ -678,11 +693,13 @@
 				5F5C37BB1A5BEF2000358678 /* MJMProject.xcdatamodeld in Sources */,
 				532BBE581A5F781A00106366 /* WPTappableLabel.m in Sources */,
 				532D70821A5BF85200770242 /* MJMSettingController.m in Sources */,
+				53DA80311A642CAA00697940 /* DramaSingleView.m in Sources */,
 				5306AD1F1A5E324500313D4A /* SelectionDetailsData.m in Sources */,
 				532D707F1A5BF84400770242 /* MJMLunTanController.m in Sources */,
 				53BB39641A629FE50076A623 /* MainviewButton.m in Sources */,
 				532BBE711A60BC8A00106366 /* UIView+MJM.m in Sources */,
 				53BB395B1A62640A0076A623 /* SelectionHeadButton.m in Sources */,
+				53DA802E1A64174000697940 /* MJMContentMoreController.m in Sources */,
 				537694931A60CABA008AB6B8 /* UILabel+MJM.m in Sources */,
 				537694901A60C428008AB6B8 /* UIButton+MJM.m in Sources */,
 				532BBE621A5FC76700106366 /* CellData.m in Sources */,
@@ -695,6 +712,7 @@
 				5306AD161A5E1AC400313D4A /* ContentSelectionDetails.m in Sources */,
 				532BBE571A5F781A00106366 /* WPHotspotLabel.m in Sources */,
 				532D706F1A5BF34F00770242 /* AppDelegate.m in Sources */,
+				53DA802B1A63D67A00697940 /* SelectionButton.m in Sources */,
 				53BB39581A6234AB0076A623 /* ContentMainview.m in Sources */,
 				532BBE5E1A5F782000106366 /* NSMutableString+TagReplace.m in Sources */,
 				532D70731A5BF52D00770242 /* WWSideslipViewController.m in Sources */,

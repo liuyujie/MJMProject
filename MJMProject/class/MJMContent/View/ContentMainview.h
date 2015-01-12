@@ -11,7 +11,8 @@
 @protocol ContentMainviewDelegate <NSObject>
 
 @optional
--(void)selectionPropertyButtonClick;
+-(void)dramasMoreWithCondition:(NSString *)Condition;
+-(void)dramaviewdidClickWithdramaID:(NSInteger)dramaID;
 @end
 
 @interface ContentMainview : UIView

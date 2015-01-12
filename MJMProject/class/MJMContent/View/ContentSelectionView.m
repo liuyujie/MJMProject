@@ -16,7 +16,6 @@
 - (id)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        [self makeContentselectionwithframe:frame];
     }
     return self;
 }
@@ -25,23 +24,29 @@
  view的主体
  
  ***************************/
--(void)makeContentselectionwithframe:(CGRect)frame
+-(void)setFirst_selection:(NSArray *)first_selection
+{
+    _first_selection = first_selection;
+    [self makeContentselectionWithSelectionarray:first_selection];
+}
+
+-(void)makeContentselectionWithSelectionarray:(NSArray *)selection_Array
 {
     self.backgroundColor = main_color;
-    UIScrollView *selec_scrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, MJMWIDTH, contentSelectionHeight)];
-    SelectionDetailsData *selection_Data = [[SelectionDetailsData alloc] init];
-    NSMutableArray *info_Array = [selection_Data makeSelectionDetailsData];
-    NSInteger typeNum = info_Array.count;
+    UIScrollView *selec_scrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(52, 0, MJMWIDTH-60, contentSelectionHeight)];
+
+    CGFloat btnwidth = 105;
+    NSInteger typeNum = selection_Array.count;
     for (int i = 0; i < typeNum; i++)
     {
-        NSMutableDictionary *dic = info_Array[i];
+        NSMutableDictionary *dic = selection_Array[i];
         [selec_scrollview addSubview:[self makeContentselectionlabelWithProperty:[dic objectForKey:@"selection_property"]
-                                                                     firstValue:[dic objectForKey:@"selection_valueArray"][0]
+                                                                     firstValue:[dic objectForKey:@"selection_valueArray"]
                                                                          index:i
-                                                                      btnWidth:110]];
+                                                                      btnWidth:btnwidth]];
     }
     selec_scrollview.showsHorizontalScrollIndicator = NO;
-    selec_scrollview.contentSize = CGSizeMake(typeNum*110+50+content_selectionbutton_width, contentSelectionHeight);
+    selec_scrollview.contentSize = CGSizeMake(typeNum*btnwidth+20, contentSelectionHeight);
     
     [self addSubview:selec_scrollview];
 }
@@ -54,12 +59,12 @@ selectionView 的主标题和副标题
 
 -(UIView *)makeContentselectionlabelWithProperty:(NSString *)Property firstValue:(NSString *)firstValue index:(NSInteger)index btnWidth:(CGFloat)btnWidth
 {
-    UIView *selec_button = [[UIView alloc] initWithFrame:CGRectMake(55+btnWidth*index, 0, btnWidth, contentSelectionHeight)];
+    UIView *selec_button = [[UIView alloc] initWithFrame:CGRectMake(btnWidth*index, 0, btnWidth, contentSelectionHeight)];
     //标题
     UILabel *label = [[UILabel alloc] init];
     NSString *Property_change = [NSString stringWithFormat:@"%@ >",Property];
     [label labelWithlabel:label
-                    frame:CGRectMake(10, 0, [self calculateSizeWithText:Property_change TextFont:12].size.width, contentSelectionHeight)
+                    frame:CGRectMake(0, 0, [self calculateSizeWithText:Property_change TextFont:12].size.width, contentSelectionHeight)
                      font:12
                      text:Property_change
                 textColor:[UIColor whiteColor]
@@ -73,7 +78,7 @@ selectionView 的主标题和副标题
                                                  name:@"selection_button_click"
                                                object:nil];
     [sublabel labelWithlabel:sublabel
-                       frame:CGRectMake(sublabelX + 5,0.7,btnWidth-sublabelX,contentSelectionHeight)
+                       frame:CGRectMake(sublabelX,0.7,btnWidth-sublabelX,contentSelectionHeight)
                         font:11
                         text:firstValue
                    textColor:gold

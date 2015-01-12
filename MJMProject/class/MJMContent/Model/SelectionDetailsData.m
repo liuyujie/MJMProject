@@ -22,9 +22,14 @@
     NSString *property2 = @"首播时间";
     NSString *property_detailed2 = @"首播时间";
     
+    NSArray *values3 = @[@"CBS",@"NBC",@"ABC",@"CW",@"HBO",@"其他"];
+    NSString *property3 = @"发行公司";
+    NSString *property_detailed3 = @"发行公司";
+    
     
     [self makeSelectionInfoWithfatherArray:selection_Array valuesArray:values property:property property_detailed:property_detailed];
     [self makeSelectionInfoWithfatherArray:selection_Array valuesArray:values2 property:property2 property_detailed:property_detailed2];
+    [self makeSelectionInfoWithfatherArray:selection_Array valuesArray:values3 property:property3 property_detailed:property_detailed3];
     
     return selection_Array;
 }
@@ -42,6 +47,23 @@
         [dic setObject:property forKey:@"selection_property"];
         [dic setObject:property_detailed forKey:@"selection_property_detailed"];
         [fatherArray addObject:dic];
+}
+
+/***************************
+ 
+ 获取属性和 首个数据
+ 
+ ***************************/
+-(NSMutableArray *)makefirstSelectionArrayWithArray:(NSMutableArray *)Array
+{
+    NSMutableArray *options_Array = [[NSMutableArray alloc] init];
+    for (int i = 0; i <Array.count; i++) {
+        NSMutableDictionary *dic = Array[i];
+        NSDictionary *dic2 = @{@"selection_property":[dic objectForKey:@"selection_property"],
+                               @"selection_valueArray":[dic objectForKey:@"selection_valueArray"][0]};
+        [options_Array addObject:dic2];
+    }
+    return options_Array;
 }
 
 @end

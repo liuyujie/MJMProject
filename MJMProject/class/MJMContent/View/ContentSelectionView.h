@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ContentSelectionView : UIView
-
+@property (nonatomic,strong) NSArray *first_selection;
 @end

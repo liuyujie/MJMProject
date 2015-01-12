@@ -35,12 +35,13 @@
 
     NSMutableArray *dramas_Array = [[NSMutableArray alloc] init];
     
-    for (int i=0; i<5; i++) {
+    for (int i=0; i<8; i++) {
         NSMutableDictionary *values = [[NSMutableDictionary alloc] init];
         
         [values setObject:mark forKey:@"drama_mark"];
         [values setObject:name forKey:@"drama_name"];
         [values setObject:pic forKey:@"drama_pic"];
+        [values setObject:@"23232" forKey:@"drama_keyID"];
         
         [dramas_Array addObject:values];
     }

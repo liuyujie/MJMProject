@@ -11,10 +11,11 @@
 @protocol ContentSelectionDetailsDelegate <NSObject>
 
 @optional
--(void)confirmbuttonclickedwithselectArray:(NSArray *)array;
+-(void)confirmbuttonclickedwithselectArray:(NSMutableArray *)array;
 
 @end
 
 @interface ContentSelectionDetails : UIView
 @property (nonatomic,weak) id<ContentSelectionDetailsDelegate> delegate;
+@property (nonatomic,strong) NSArray *selection_Array;
 @end

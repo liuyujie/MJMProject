@@ -19,16 +19,6 @@
 
 @implementation ContentSelectionDetails
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        self.backgroundColor = [UIColor whiteColor];
-        [self makeDetailsviewWithframe:(CGRect)frame];
-    }
-    return self;
-}
-
 -(NSMutableArray *)selbuttonArray
 {
     if (_selbuttonArray == nil) {
@@ -44,6 +34,13 @@
     }
     return _selbutton_nameArray;
 }
+
+-(void)setSelection_Array:(NSArray *)selection_Array
+{
+    _selection_Array = selection_Array;
+    [self makeDetailsview];
+}
+
 /***************************
  
  设置下拉界面
@@ -51,16 +48,15 @@
       内容部分主题和内容
  
  ***************************/
--(void)makeDetailsviewWithframe:(CGRect)frame;
+-(void)makeDetailsview;
 {
     CGFloat max_y = 0;
+    self.backgroundColor = [UIColor whiteColor];
     
     UIScrollView *details_tableview = [[UIScrollView alloc] initWithFrame:CGRectMake(0,30,MJMWIDTH,MJMHEIGHT-30)];
-    SelectionDetailsData *data = [[SelectionDetailsData alloc] init];
-    NSMutableArray *data_array = [data makeSelectionDetailsData];
     
-    for (int i=0; i<data_array.count; i++) {
-        NSMutableDictionary *dictionary = data_array[i];
+    for (int i=0; i<self.selection_Array.count; i++) {
+        NSMutableDictionary *dictionary = self.selection_Array[i];
         NSArray *dic_data = [dictionary objectForKey:@"selection_valueArray"];
         NSString *dic_detailtitle = [dictionary objectForKey:@"selection_property_detailed"];
         

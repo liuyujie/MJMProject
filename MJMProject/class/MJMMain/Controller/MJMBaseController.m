@@ -19,8 +19,7 @@
     [super viewDidLoad];
     
     [self.navigationBar setTranslucent:NO];
-    [self.view setBackgroundColor:[UIColor whiteColor]];
-    self.navigationBar.backgroundColor = [UIColor blackColor];
+    [self.view setBackgroundColor:[UIColor clearColor]];
     
     UINavigationBar *navBar = [UINavigationBar appearance];
     [navBar setBackgroundImage:[UIImage imageNamed:@"navbar_background"] forBarMetrics:UIBarMetricsDefault];
@@ -28,6 +27,8 @@
     NSMutableDictionary *attri = [NSMutableDictionary dictionary];
     attri[NSForegroundColorAttributeName] = [UIColor whiteColor];
     navBar.titleTextAttributes = attri;
+    
+
 }
 
 
