@@ -13,9 +13,8 @@
 #import "UILabel+MJM.h"
 
 @interface ContentSelectionDetails()
-{
-    NSMutableArray *selbutton_nameArray;
-}
+@property (nonatomic,strong) NSMutableArray *selbuttonArray;
+@property (nonatomic,strong) NSMutableArray *selbutton_nameArray;
 @end
 
 @implementation ContentSelectionDetails
@@ -38,6 +37,13 @@
     return _selbuttonArray;
 }
 
+-(NSMutableArray *)selbutton_nameArray
+{
+    if (_selbutton_nameArray == nil) {
+        _selbutton_nameArray = [NSMutableArray array];
+    }
+    return _selbutton_nameArray;
+}
 /***************************
  
  设置下拉界面
@@ -55,17 +61,17 @@
     
     for (int i=0; i<data_array.count; i++) {
         NSMutableDictionary *dictionary = data_array[i];
-        NSArray *dic_data = [dictionary objectForKey:@"selection_data"];
-        NSString *dic_detailtitle = [dictionary objectForKey:@"selection_title"];
+        NSArray *dic_data = [dictionary objectForKey:@"selection_valueArray"];
+        NSString *dic_detailtitle = [dictionary objectForKey:@"selection_property_detailed"];
         
         max_y = [self makeDetailscontentWitharray:dic_data type:dic_detailtitle fatherview:details_tableview positionY:max_y index:i];
     }
     details_tableview.contentSize = CGSizeMake(MJMWIDTH, max_y+150);
     [self addSubview:details_tableview];
-    //confirem button
+    //确认按钮
     [self makeConfirmbutton];
     
-    //foot shadow
+    //底部的阴影
     [self makefootshadowWithview:self];
 }
 
@@ -100,7 +106,8 @@
                                           titleColor:main_color
                                      backgroundColor:[UIColor whiteColor]
                                                 font:11];
-    [confirm_button layersforButton:confirm_button WithCornerRadius:3
+    [confirm_button layersforButton:confirm_button
+                   WithCornerRadius:3
                         borderColor:main_color
                         borderWidth:0.5
                              ifMask:YES];
@@ -119,7 +126,7 @@
 -(void)confirmbuttonClicked
 {
     if ([self.delegate respondsToSelector:@selector(confirmbuttonclickedwithselectArray:)]) {
-        [self.delegate confirmbuttonclickedwithselectArray:selbutton_nameArray];
+        [self.delegate confirmbuttonclickedwithselectArray:_selbutton_nameArray];
     }
 }
 
@@ -169,7 +176,7 @@
             [content_single_button setTitleColor:[UIColor whiteColor] forState:0];
             
             [self.selbuttonArray addObject:content_single_button];
-            [selbutton_nameArray addObject:content_single_button.titleLabel.text];
+            [self.selbutton_nameArray addObject:content_single_button.titleLabel.text];
         }
         [content_single_button addTarget:self
                                   action:@selector(detailscontentbuttonClicked:)
@@ -192,7 +199,7 @@
     [button setBackgroundColor:main_color];
     [button setTitleColor:[UIColor whiteColor] forState:0];
     
-    selbutton_nameArray[button.tag] = button.titleLabel.text;
+    _selbutton_nameArray[button.tag] = button.titleLabel.text;
     
     NSString *tagString = [NSString stringWithFormat:@"%d",(int)button.tag];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"selection_button_click"
@@ -204,6 +211,7 @@
 /***************************
  
  设置view底部的阴影
+ 
  ***************************/
 -(void)makefootshadowWithview:(UIView *)view
 {
@@ -216,6 +224,9 @@
     [view.layer insertSublayer:gradient atIndex:0];
 }
 
-
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 @end

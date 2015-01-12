@@ -188,6 +188,7 @@
                   fatherView:evaluste_view];
     text_hit.font = [UIFont boldSystemFontOfSize:12];
     
+    //五个星星
     for (int i=0; i<5; i++) {
         UIButton *star_button = [[UIButton alloc] initWithFrame:CGRectMake(60+i*18, 0, 14, 14)];
         star_button.tag = i;
@@ -211,17 +212,9 @@
     NSInteger btn_index = star_btn.tag;
     for (int i=0; i<5; i++) {
         UIButton *star_indexBtn = _evaluate_btnlist[i];
-        if (i <= btn_index) {
-            star_indexBtn.selected = YES;
-        }
-        else
-        {
-            star_indexBtn.selected = NO;
-        }
+        star_indexBtn.selected = (i<=btn_index)?YES:NO;
     }
 }
-
-
 
 /***************************
  

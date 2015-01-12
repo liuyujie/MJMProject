@@ -10,5 +10,4 @@
 
 @interface SelectionDetailsData : NSObject
 -(NSMutableArray *)makeSelectionDetailsData;
--(NSMutableArray *)makeSelectionData;
 @end

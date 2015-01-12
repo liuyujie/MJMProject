@@ -25,13 +25,14 @@
 #define font_gray         [UIColor colorWithRed: 120.0/255 green:120.0/255 blue:120.0/255 alpha:1]
 #define gray_person       [UIColor colorWithRed: 102.0/255 green:102.0/255 blue:102.0/255 alpha:1]
 #define content_bgcolor   [UIColor colorWithRed: 252.0/255 green:252.0/255 blue:252.0/255 alpha:1]
+#define scrollview_gray   [UIColor colorWithRed: 244.0/255 green:244.0/255 blue:244.0/255 alpha:1]
 #define gray_comment      [UIColor colorWithRed: 248.0/255 green:248.0/255 blue:248.0/255 alpha:0.8]
 #define tabbar_hudgray    [UIColor colorWithRed: 237.0/255 green:237.0/255 blue:237.0/255 alpha:1]
 #define line_gray         [UIColor colorWithRed: 230.0/255 green:230.0/255 blue:230.0/255 alpha:1]
 
-#define gold              [UIColor colorWithRed: 252.0/255 green:185.0/255 blue:46.0/255 alpha:1]
+#define gold              [UIColor colorWithRed: 252.0/255 green:230.0/255 blue:140.0/255 alpha:1]
 #define content_color     [UIColor colorWithRed: 223.0/255 green:35.0/255 blue:31.0/255 alpha:1]
-#define main_color        [UIColor colorWithRed:197.0/255 green:64.0/255 blue:83.0/255 alpha:1]
+#define main_color        [UIColor colorWithRed:191.0/255 green:44.0/255 blue:65.0/255 alpha:1]
 #define tabbar_blue       [UIColor colorWithRed:54.0/255 green:158.0/255 blue:235.0/255 alpha:1]
 #define link_blue         [UIColor colorWithRed:77.0/255 green:117.0/255 blue:168.0/255 alpha:1]
 

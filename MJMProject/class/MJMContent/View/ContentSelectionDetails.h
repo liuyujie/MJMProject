@@ -16,6 +16,5 @@
 @end
 
 @interface ContentSelectionDetails : UIView
-@property (nonatomic,strong) NSMutableArray *selbuttonArray;
 @property (nonatomic,weak) id<ContentSelectionDetailsDelegate> delegate;
 @end

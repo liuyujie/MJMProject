@@ -52,6 +52,7 @@
         NSString *selName = [NSString stringWithFormat:@"TabBar%dSel", i + 1];
         [tabbar addTabButtonWithName:name selName:selName title:array_title[i] i:i];
     }
+    
 }
 
 - (void)tabBar:(MJMTabbar *)tabBar didSelectButtonFrom:(int)from to:(int)to

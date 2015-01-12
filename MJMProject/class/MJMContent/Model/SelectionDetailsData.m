@@ -12,22 +12,21 @@
 
 -(NSMutableArray *)makeSelectionDetailsData
 {
-    NSMutableArray *data = [[NSMutableArray alloc] init];
+    NSMutableArray *selection_Array = [[NSMutableArray alloc] init];
+    NSArray *values = @[@"爱情",@"喜剧",@"动作",@"恐怖",@"悬疑",@"科幻",@"灾难",@"战争",@"剧情",@"动画",@"音乐",@"纪录片",@"伦理",@"惊悚",@"奇幻",@"警匪",@"其他"];
+    NSString *property = @"美剧类型";
+    NSString *property_detailed = @"美剧类型";
     
-   
-    NSArray *array1 = @[@"科幻",@"爱情",@"乡村",@"喜剧",@"恐怖",@"刑侦",@"家庭",@"家庭"];
-    NSString *array1_title = @"美剧类型";
-    NSString *array1_title_simple = @"类型";
-    NSArray *array2 = @[@"2015",@"2014",@"2013",@"2012",@"2011",@"2010",@"2009"];
-    NSString *array2_title = @"首播时间";
-    NSString *array2_title_simple = @"时间";
-    NSArray *array3 = @[@"最新",@"最热",@"点击最多"];
-    NSString *array3_title = @"美剧排序";
-    NSString *array3_title_simple = @"排序";
-    [self makedatawithDataarray:array1 title:array1_title simpletitle:array1_title_simple dataarray:data];
-    [self makedatawithDataarray:array2 title:array2_title simpletitle:array2_title_simple dataarray:data];
-    [self makedatawithDataarray:array3 title:array3_title simpletitle:array3_title_simple dataarray:data];
-    return data;
+    
+    NSArray *values2 = @[@"2015",@"2014",@"2013",@"2012",@"2011",@"2010前",@"2005前",@"2000前"];
+    NSString *property2 = @"首播时间";
+    NSString *property_detailed2 = @"首播时间";
+    
+    
+    [self makeSelectionInfoWithfatherArray:selection_Array valuesArray:values property:property property_detailed:property_detailed];
+    [self makeSelectionInfoWithfatherArray:selection_Array valuesArray:values2 property:property2 property_detailed:property_detailed2];
+    
+    return selection_Array;
 }
 
 /***************************
@@ -36,32 +35,13 @@
  
  ***************************/
 
--(void)makedatawithDataarray:(NSArray *)array title:(NSString *)title simpletitle:(NSString *)simpletitle dataarray:(NSMutableArray *)dataarray
+-(void)makeSelectionInfoWithfatherArray:(NSMutableArray *)fatherArray valuesArray:(NSArray *)valuesArray property:(NSString *)property property_detailed:(NSString *)property_detailed
 {
-    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
-    [dictionary setObject:array forKey:@"selection_data"];
-    [dictionary setObject:title forKey:@"selection_title"];
-    [dictionary setObject:simpletitle forKey:@"selection_title_simple"];
-    [dataarray addObject:dictionary];
+        NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
+        [dic setObject:valuesArray forKey:@"selection_valueArray"];
+        [dic setObject:property forKey:@"selection_property"];
+        [dic setObject:property_detailed forKey:@"selection_property_detailed"];
+        [fatherArray addObject:dic];
 }
-/***************************
- 
- selectionView 的数据
- 
- ***************************/
--(NSMutableArray *)makeSelectionData
-{
-    NSMutableArray *data_array = [self makeSelectionDetailsData];
-    NSMutableArray *selection_datas = [[NSMutableArray alloc] init];
-    for (int i=0; i<data_array.count; i++) {
-        NSMutableDictionary *titles_dic = [[NSMutableDictionary alloc] init];
-        NSString *first_data = [data_array[i] objectForKey:@"selection_data"][0];
-        NSString *dic_title_simple = [data_array[i] objectForKey:@"selection_title_simple"];
-        
-        [titles_dic setObject:first_data forKey:@"first_data"];
-        [titles_dic setObject:dic_title_simple forKey:@"title_simple"];
-        [selection_datas addObject:titles_dic];
-    }
-    return selection_datas;
-}
+
 @end
