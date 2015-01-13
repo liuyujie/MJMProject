@@ -10,16 +10,15 @@
 #import "ContentSelectionDetails.h"
 #import "UIImage+MJM.h"
 #import "ContentSelectionView.h"
-#import "ContentTableview.h"
 #import "SelectionHeadButton.h"
 #import "ContentMainview.h"
 #import "MainData.h"
 #import "SelectionButton.h"
 #import "MJMContentMoreController.h"
 #import "SelectionDetailsData.h"
-#import "DramaSingleView.h"
+#import "DramaSingleVC.h"
 
-@interface MJMContentController ()<ContentSelectionDetailsDelegate,ContentMainviewDelegate,SelectionButtonDelegate>
+@interface MJMContentController ()<ContentSelectionDetailsDelegate,ContentMainviewDelegate,SelectionButtonDelegate,SelectionHeadButtonDelegate>
 {
     ContentSelectionDetails *selection_detailsView;
     BOOL isset;//是否已经出现selection view
@@ -32,7 +31,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+
     SelectionDetailsData *selection_Data = [[SelectionDetailsData alloc] init];
     NSMutableArray *selection_Array = [selection_Data makeSelectionDetailsData];
     list_array = [selection_Data makefirstSelectionArrayWithArray:selection_Array];
@@ -66,14 +66,24 @@
 
 /***************************
  
+ 点击头像 跳出个人详细页面
+ 
+ ***************************/
+
+-(void)headImageClickWithPersoninfo:(NSString *)personinfo
+{
+    NSLog(@"head image click");
+}
+
+/***************************
+ 
  点击一个美剧 跳出详细信息
  
  ***************************/
 
 -(void)dramaviewdidClickWithdramaID:(NSInteger)dramaID
 {
-    NSLog(@"%d",(int)dramaID);
-    DramaSingleView *single_view = [[DramaSingleView alloc] init];
+    DramaSingleVC *single_view = [[DramaSingleVC alloc] init];
     // 采用新浪微博 效果
     [self.navigationController pushViewController:single_view animated:YES];
 }

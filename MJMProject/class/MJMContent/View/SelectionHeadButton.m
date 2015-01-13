@@ -42,7 +42,9 @@
 
 -(void)headImageviewClick
 {
-    NSLog(@"1");
+    if ([self.delegate respondsToSelector:@selector(headImageClickWithPersoninfo:)]) {
+        [self.delegate headImageClickWithPersoninfo:@"1212"];
+    }
 }
 
 @end

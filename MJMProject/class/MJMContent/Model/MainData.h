@@ -10,4 +10,5 @@
 
 @interface MainData : NSObject
 -(NSMutableArray *)makeMaindataWithOptions:(NSArray *)options;
+-(NSMutableArray *)makeContentMoreDramasWithOptions:(NSArray *)options type:(NSString *)type index:(NSInteger)index;
 @end

@@ -1,5 +1,5 @@
 //
-//  DramaSingleView.h
+//  DramaSingleVC.h
 //  MJMProject
 //
 //  Created by bassamyan on 15/1/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DramaSingleView : UIViewController
+@interface DramaSingleVC : UIViewController
 
 @end

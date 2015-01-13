@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SelectionHeadButton : UIView
 
+@protocol SelectionHeadButtonDelegate <NSObject>
+
+@optional
+-(void)headImageClickWithPersoninfo:(NSString *)personinfo;
+
+@end
+@interface SelectionHeadButton : UIView
+@property (nonatomic,weak) id<SelectionHeadButtonDelegate> delegate;
 @end

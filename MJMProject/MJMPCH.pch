@@ -23,6 +23,7 @@
 #define gray_title        [UIColor colorWithRed: 70.0/255 green:70.0/255 blue:70.0/255 alpha:1]
 #define tabbar_buttongray [UIColor colorWithRed: 80.0/255 green:80.0/255 blue:80.0/255 alpha:1]
 #define font_gray         [UIColor colorWithRed: 120.0/255 green:120.0/255 blue:120.0/255 alpha:1]
+#define gray_value        [UIColor colorWithRed: 50.0/255 green:50.0/255 blue:50.0/255 alpha:1]
 #define gray_person       [UIColor colorWithRed: 102.0/255 green:102.0/255 blue:102.0/255 alpha:1]
 #define content_bgcolor   [UIColor colorWithRed: 252.0/255 green:252.0/255 blue:252.0/255 alpha:1]
 #define scrollview_gray   [UIColor colorWithRed: 244.0/255 green:244.0/255 blue:244.0/255 alpha:1]

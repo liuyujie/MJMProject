@@ -7,17 +7,45 @@
 //
 
 #import "MJMContentMoreController.h"
+#import "ContentMoreCell.h"
+#import "ContentMoreCellFrame.h"
+#import "MainData.h"
+#import "MJRefresh.h"
+#import "DramaSingleVC.h"
 
 @interface MJMContentMoreController ()
-
+{
+    //已获得的数据数目
+    NSInteger index;
+}
+@property (nonatomic,strong) NSMutableArray *moreDrama_Array;
 @end
 
 @implementation MJMContentMoreController
 
+-(NSMutableArray *)moreDrama_Array
+{
+    if (_moreDrama_Array == nil) {
+        _moreDrama_Array = [NSMutableArray array];
+    }
+    return _moreDrama_Array;
+}
+
+/***************************
+ 
+ 上一级菜单选择的 美剧属性（类别、时间、公司）
+ 
+ ***************************/
 -(void)setOptions_Array:(NSArray *)options_Array
 {
     _options_Array = options_Array;
 }
+
+/***************************
+ 
+ 选择类别（最新、点击最多、评分最高）
+ 
+ ***************************/
 
 -(void)setType:(NSString *)type
 {
@@ -26,82 +54,82 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = scrollview_gray;
+    self.title = @"更多美剧";
+    MainData *moreDramas = [[MainData alloc] init];
+    self.moreDrama_Array = [moreDramas makeContentMoreDramasWithOptions:self.options_Array type:self.type index:0];
+    index = self.moreDrama_Array.count;
+    
+    [self.tableView addFooterWithTarget:self action:@selector(footerRereshing)];
+    self.tableView.contentInset = UIEdgeInsetsMake(-5, 0, 0, 0);
+    
 }
+- (void)footerRereshing
+{
+    MainData *moreDramas = [[MainData alloc] init];
+    NSMutableArray *moreData_Array = [moreDramas makeContentMoreDramasWithOptions:self.options_Array type:self.type index:index];
+    if (moreData_Array.count > 0) {
+        index += moreData_Array.count;
+        NSLog(@"%d",index);
+        for (int i=0; i<moreData_Array.count; i++) {
+            NSMutableDictionary *dic = moreData_Array[i];
+            [_moreDrama_Array addObject:dic];
+        }
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"没有更多消息了"
+                                                        message:nil
+                                                       delegate:nil
+                                              cancelButtonTitle:@"好"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+    }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+        [self.tableView footerEndRefreshing];
+    });
 }
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 1;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.moreDrama_Array.count;
 }
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 1;
-}
-
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *ID = @"contact";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    static NSString *ID = @"content";
+    ContentMoreCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (cell==nil) {
-        cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+        cell=[[ContentMoreCell alloc] init];
+        [cell makeContentMoreCellWithDramainfoarray:self.moreDrama_Array[indexPath.row]];
+        
+        UIView *backgroundView = [[UIView alloc]initWithFrame:cell.frame];
+        backgroundView.backgroundColor = tabbar_hudgray;
+        cell.selectedBackgroundView = backgroundView;
     }
     return cell;
-    
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ContentMoreCellFrame *cellframe = [[ContentMoreCellFrame alloc] init];
+    return [cellframe calculateCellFrameWithdramainfoarray:self.moreDrama_Array[indexPath.row]];
+}
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DramaSingleVC *drama_view = [[DramaSingleVC alloc] init];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    [self.navigationItem setBackBarButtonItem:backButton];
+    [self.navigationController pushViewController:drama_view animated:YES];
+}
+
+-(BOOL)hidesBottomBarWhenPushed
+{
     return YES;
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

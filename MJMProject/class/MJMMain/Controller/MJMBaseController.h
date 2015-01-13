@@ -6,8 +6,9 @@
 //  Copyright (c) 2015年 apple. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
-@interface MJMBaseController : UINavigationController
+#import "KKNavigationController.h"
+
+@interface MJMBaseController : KKNavigationController
 
 @end
