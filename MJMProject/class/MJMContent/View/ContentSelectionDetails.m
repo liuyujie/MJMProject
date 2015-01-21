@@ -62,7 +62,7 @@
         
         max_y = [self makeDetailscontentWitharray:dic_data type:dic_detailtitle fatherview:details_tableview positionY:max_y index:i];
     }
-    details_tableview.contentSize = CGSizeMake(MJMWIDTH, max_y+150);
+    details_tableview.contentSize = CGSizeMake(MJMWIDTH, max_y);
     [self addSubview:details_tableview];
     //确认按钮
     [self makeConfirmbutton];

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DramaSingleVC : UIViewController
 
+@interface DramaSingleVC : UIViewController
 @end

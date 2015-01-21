@@ -17,6 +17,8 @@
 #import "MJMContentMoreController.h"
 #import "SelectionDetailsData.h"
 #import "DramaSingleVC.h"
+#import "MJMTabbar.h"
+#import "KKNavigationController.h"
 
 @interface MJMContentController ()<ContentSelectionDetailsDelegate,ContentMainviewDelegate,SelectionButtonDelegate,SelectionHeadButtonDelegate>
 {
@@ -25,44 +27,43 @@
     NSArray *list_array;
     ContentMainview *main_View;
     SelectionButton *selection_button;
+    CGFloat nav_height;
+    NSMutableArray *selection_Array;
+    ContentSelectionView *contentSelection;
 }
 @end
 @implementation MJMContentController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
 
+    self.view.backgroundColor = scrollview_gray;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    //获取数据
     SelectionDetailsData *selection_Data = [[SelectionDetailsData alloc] init];
-    NSMutableArray *selection_Array = [selection_Data makeSelectionDetailsData];
+    selection_Array = [selection_Data makeSelectionDetailsData];
     list_array = [selection_Data makefirstSelectionArrayWithArray:selection_Array];
+ 
+    //导航栏
+    contentSelection = [[ContentSelectionView alloc] initWithFrame:CGRectMake(0, 0, MJMWIDTH, contentSelectionHeight)];
+    contentSelection.first_selection = list_array;
+    [self.view addSubview:contentSelection];
+    
+    //头像
+    SelectionHeadButton *headImage_button = [[SelectionHeadButton alloc] initWithFrame:CGRectMake(5, 0, 45, 45)];
+    [self.view insertSubview:headImage_button aboveSubview:contentSelection];
     
     //按钮
     CGFloat view_width = 25;
     selection_button = [[SelectionButton alloc] initWithFrame:CGRectMake(MJMWIDTH-view_width, 0, view_width, view_width)];
     selection_button.delegate = self;
-    [self.view addSubview:selection_button];
-    
-    //头像
-    SelectionHeadButton *headImage_button = [[SelectionHeadButton alloc] initWithFrame:CGRectMake(5, 0, 45, 45)];
-    [self.view addSubview:headImage_button];
-    
-    //导航栏
-    ContentSelectionView *contentSelection = [[ContentSelectionView alloc] initWithFrame:CGRectMake(0, 0, MJMWIDTH, contentSelectionHeight)];
-    contentSelection.first_selection = list_array;
-    [self.view insertSubview:contentSelection belowSubview:selection_button];
-    
-    //下拉菜单 属性选择 确定按钮点击事件
-    ContentSelectionDetails *selection_details = [[ContentSelectionDetails alloc] initWithFrame:CGRectMake(0,contentSelectionHeight-MJMHEIGHT,MJMWIDTH,MJMHEIGHT-30)];
-    selection_details.selection_Array = selection_Array;
-    selection_details.delegate = self;
-    selection_detailsView = selection_details;
-    isset = NO;
-    [self.view insertSubview:selection_detailsView belowSubview:contentSelection];
+    [self.view insertSubview:selection_button aboveSubview:contentSelection];
     
     //设置scrollview
     [self makeMainscrollviewWithOptions:nil];
 }
+
 
 /***************************
  
@@ -85,7 +86,14 @@
 {
     DramaSingleVC *single_view = [[DramaSingleVC alloc] init];
     // 采用新浪微博 效果
-    [self.navigationController pushViewController:single_view animated:YES];
+
+    single_view.modalPresentationStyle = UIModalPresentationFullScreen;
+    
+    [self presentViewController:single_view
+                       animated:YES
+                     completion:^{
+                         
+                     }];
 }
 
 /***************************
@@ -117,17 +125,20 @@
     if (main_View != nil) {
         [main_View removeFromSuperview];
         main_View = nil;
-        mainview_height -= 49;
     }
     //主要内容
     ContentMainview *main_view = [[ContentMainview alloc] initWithFrame:CGRectMake(0,contentSelectionHeight, MJMWIDTH, mainview_height)];
     [main_view makeMaincontentWithDramaArray:main_data_array];
     main_view.delegate = self;
     main_View = main_view;
-    [self.view insertSubview:main_View belowSubview:selection_detailsView];
+    if (selection_detailsView == nil) {
+        [self.view insertSubview:main_view belowSubview:contentSelection];
+    }
+    else
+    {
+        [self.view insertSubview:main_view belowSubview:selection_detailsView];
+    }
 }
-
-
 /***************************
  
  下拉 选择属性菜单里的确定按钮点击事件
@@ -154,6 +165,16 @@
 
 -(void)selectionbuttonDidClickedWithbutton:(UIButton *)button
 {
+    if (selection_detailsView == nil) {
+        //下拉菜单 属性选择 确定按钮点击事件
+        selection_detailsView = [[ContentSelectionDetails alloc] initWithFrame:CGRectMake(0,contentSelectionHeight-MJMHEIGHT,MJMWIDTH,MJMHEIGHT-30)];
+        selection_detailsView.selection_Array = selection_Array;
+        selection_detailsView.delegate = self;
+        isset = NO;
+        [self.view insertSubview:selection_detailsView belowSubview:contentSelection];
+    }
+
+    
     [UIView animateWithDuration:content_viewshow_duration animations:^{
         CGAffineTransform rotation = button.imageView.transform;
         button.imageView.transform = CGAffineTransformRotate(rotation,M_PI);

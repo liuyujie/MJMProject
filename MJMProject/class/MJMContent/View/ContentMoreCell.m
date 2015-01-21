@@ -31,9 +31,9 @@
  
  ***************************/
 
--(void)makeContentMoreCellWithDramainfoarray:(NSMutableDictionary *)dramainfo_Array
+-(void)makeContentMoreCellWithDramainfoarray:(NSDictionary *)dramainfo_Array
 {
-    NSArray *info_list = [dramainfo_Array objectForKey:@"info_list"];
+    NSArray *info_list = @[@"pic_property",@"drama_dic",@"grade_dic",@"state_dic",@"episode_dic",@"company_dic"];
     
     
     CGFloat head_image_width = 152.5*(MJMWIDTH/320);
@@ -47,7 +47,7 @@
     CGFloat lastObjectY = head_image.frame.origin.y;
     
     for (int i = 1; i < info_list.count; i++) {
-        NSMutableDictionary *dic = [dramainfo_Array objectForKey:info_list[i]];
+        NSDictionary *dic = [dramainfo_Array objectForKey:info_list[i]];
         lastObjectY = [self makeMJMDetailesWithfatherview:self
                                                   property:[dic objectForKey:@"property"]
                                                       data:[dic objectForKey:@"value"]
@@ -124,7 +124,6 @@
         value_nostyle = [NSString stringWithFormat:@"%@ : %@",property,data];
         value_withstyle = [NSString stringWithFormat:@"<property>%@ : </property>%@",property,data];
     }
-    
     
     CGRect text_size = [self calculateSizeWithFont:bodyfont Width:labelWidth Height:MAXFLOAT Text:value_nostyle];
     

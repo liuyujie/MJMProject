@@ -41,7 +41,7 @@
 //MJMcontent
 #define contentSelectionHeight 25
 #define content_selectionbutton_width 30
-#define content_viewshow_duration 0.6
+#define content_viewshow_duration 0.8
 #define font_Main 11
 
 #endif

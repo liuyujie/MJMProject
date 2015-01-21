@@ -46,7 +46,6 @@
  选择类别（最新、点击最多、评分最高）
  
  ***************************/
-
 -(void)setType:(NSString *)type
 {
     _type = type;
@@ -54,6 +53,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = scrollview_gray;
     self.title = @"更多美剧";
@@ -65,13 +65,13 @@
     self.tableView.contentInset = UIEdgeInsetsMake(-5, 0, 0, 0);
     
 }
+
 - (void)footerRereshing
 {
     MainData *moreDramas = [[MainData alloc] init];
     NSMutableArray *moreData_Array = [moreDramas makeContentMoreDramasWithOptions:self.options_Array type:self.type index:index];
     if (moreData_Array.count > 0) {
         index += moreData_Array.count;
-        NSLog(@"%d",index);
         for (int i=0; i<moreData_Array.count; i++) {
             NSMutableDictionary *dic = moreData_Array[i];
             [_moreDrama_Array addObject:dic];
@@ -122,8 +122,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DramaSingleVC *drama_view = [[DramaSingleVC alloc] init];
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleBordered target:nil action:nil];
-    [self.navigationItem setBackBarButtonItem:backButton];
+    
     [self.navigationController pushViewController:drama_view animated:YES];
 }
 

@@ -15,6 +15,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        
         //按钮
         [self setImage:[UIImage resizedImageWithName:@"content_selectionview_arrow.png"] forState:0];
         [self setImage:[UIImage resizedImageWithName:@"content_selectionview_arrow.png"] forState:1<<0];

@@ -19,6 +19,7 @@
     CGFloat positionY = 20;
     
     UIScrollView *Drama_view = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width,self.frame.size.height)];
+    
     Drama_view.backgroundColor = scrollview_gray;
     for (int i=0; i<3; i++) {
         NSMutableDictionary *property_Array = DramaArray[i];
@@ -28,7 +29,7 @@
                                                  view_value:[property_Array objectForKey:@"dramas_value_Array"]
                                                   positionY:positionY];
     }
-    Drama_view.contentSize = CGSizeMake(MJMWIDTH, positionY+20);
+    Drama_view.contentSize = CGSizeMake(MJMWIDTH, positionY+49);
     [self addSubview:Drama_view];
 }
 

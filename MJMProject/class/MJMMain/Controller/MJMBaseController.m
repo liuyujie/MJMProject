@@ -17,26 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.navigationBar setTranslucent:NO];
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    
-    UINavigationBar *navBar = [UINavigationBar appearance];
-    [navBar setBackgroundImage:[UIImage imageNamed:@"navbar_background"] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bg"] forBarMetrics:UIBarMetricsDefault];
     
     NSMutableDictionary *attri = [NSMutableDictionary dictionary];
     attri[NSForegroundColorAttributeName] = [UIColor whiteColor];
-    navBar.titleTextAttributes = attri;
-
+    self.navigationBar.titleTextAttributes = attri;
+    self.navigationBarHidden = NO;
     [self.navigationBar setTintColor:[UIColor whiteColor]];
-
 }
-
-
-
-- (BOOL)hidesBottomBarWhenPushed
-{
-    return YES;
-}
-
 @end

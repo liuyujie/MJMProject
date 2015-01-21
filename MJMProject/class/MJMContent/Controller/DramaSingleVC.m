@@ -16,25 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
+    self.view.backgroundColor = [UIColor blueColor];
     
-    self.navigationController.navigationBarHidden = YES;
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    CGSize bounds = self.navigationController.navigationBar.frame.size;
-    self.navigationController.navigationBar = [self makeCustomNavbarWithBounds:bounds];
-    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
+    [button setTitle:@"Dismiss me" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
 }
 
--(UINavigationBar *)makeCustomNavbarWithBounds:(CGSize)Bounds
-{
-    UINavigationBar *customBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, Bounds.width, Bounds.height)];
-    
-    return customBar;
-}
-
--(BOOL)hidesBottomBarWhenPushed
-{
-    return YES;
-}
 
 @end

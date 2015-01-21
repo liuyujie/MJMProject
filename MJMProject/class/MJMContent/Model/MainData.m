@@ -19,54 +19,16 @@
  获取一个美剧类目
  
  ***************************/
--(NSMutableDictionary *)getMoreDataWithOptions:(NSArray *)options type:(NSString *)type index:(NSInteger)index
+-(NSDictionary *)getMoreDataWithOptions:(NSArray *)options type:(NSString *)type index:(NSInteger)index
 {
-    NSMutableDictionary *properties = [[NSMutableDictionary alloc] init];
-
-    NSString *pic_property = @"flash2.jpg";
-
-    
-    NSMutableDictionary *name_dic = [[NSMutableDictionary alloc] init];
-    NSString *name_property = @"美剧名";
-    NSString *name_value = @"闪电侠";
-    [name_dic setObject:name_property forKey:@"property"];
-    [name_dic setObject:name_value forKey:@"value"];
-    
-    NSMutableDictionary *state_dic = [[NSMutableDictionary alloc] init];
-    NSString *state_property = @"播出状态";
-    NSString *state_value = @"播出中";
-    [state_dic setObject:state_property forKey:@"property"];
-    [state_dic setObject:state_value forKey:@"value"];
-    
-    NSMutableDictionary *company_dic = [[NSMutableDictionary alloc] init];
-    NSString *company_property = @"发行公司";
-    NSArray *company_value = @[@"ABC"];
-    [company_dic setObject:company_property forKey:@"property"];
-    [company_dic setObject:company_value forKey:@"values"];
-    
-    NSMutableDictionary *episode_dic = [[NSMutableDictionary alloc] init];
-    NSString *episode_property = @"已播出至";
-    NSString *episode_value = @"第5季 第3集";
-    [episode_dic setObject:episode_property forKey:@"property"];
-    [episode_dic setObject:episode_value forKey:@"value"];
-    
-    NSMutableDictionary *grade_dic = [[NSMutableDictionary alloc] init];
-    NSString *grade_property = @"总评分";
-    NSString *grade_value = @"9.7";
-    [grade_dic setObject:grade_property forKey:@"property"];
-    [grade_dic setObject:grade_value forKey:@"value"];
-    
-    [properties setObject:pic_property forKey:@"pic_property"];
-    [properties setObject:name_dic forKey:@"drama_name"];
-    [properties setObject:state_dic forKey:@"state_dic"];
-    [properties setObject:company_dic forKey:@"company_dic"];
-    [properties setObject:episode_dic forKey:@"episode_dic"];
-    [properties setObject:grade_dic forKey:@"grade_dic"];
-    
-    NSArray *list_Array = @[@"pic_property",@"drama_name",@"grade_dic",@"state_dic",@"episode_dic",@"company_dic"];
-    [properties setObject:list_Array forKey:@"info_list"];
-    
-    return properties;
+    NSDictionary *dic = @{@"pic_property":@"flash2.jpg",
+                          @"drama_dic"   :@{@"property":@"美剧名",@"value":@"闪电侠"},
+                          @"grade_dic"   :@{@"property":@"总评分",@"value":@"9.7"},
+                          @"state_dic"   :@{@"property":@"播出状态",@"value":@"播出中"},
+                          @"episode_dic" :@{@"property":@"已播出至",@"value":@"第5季 第3集"},
+                          @"company_dic" :@{@"property":@"发行公司",@"values":@[@"ABC"]}
+                          };
+    return dic;
 }
 
 /***************************
@@ -85,7 +47,7 @@
         NSMutableArray *Arrays = [[NSMutableArray alloc] init];
         
         for (int i=0; i<10; i++) {
-            NSMutableDictionary *dic = [self getMoreDataWithOptions:options type:type index:index];
+            NSDictionary *dic = [self getMoreDataWithOptions:options type:type index:index];
             [Arrays addObject:dic];
         }
         return Arrays;

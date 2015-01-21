@@ -37,6 +37,8 @@
 		532D70B01A5C089600770242 /* TabBar4.png in Resources */ = {isa = PBXBuildFile; fileRef = 532D70A81A5C089600770242 /* TabBar4.png */; };
 		532D70B11A5C089600770242 /* TabBar4Sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 532D70A91A5C089600770242 /* TabBar4Sel.png */; };
 		532D70B41A5C0BDB00770242 /* UIImage+MJM.m in Sources */ = {isa = PBXBuildFile; fileRef = 532D70B31A5C0BDB00770242 /* UIImage+MJM.m */; };
+		533E4EEB1A668F94002D1821 /* clear_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 533E4EEA1A668F94002D1821 /* clear_bg.png */; };
+		533E4EED1A66908B002D1821 /* nav_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 533E4EEC1A66908B002D1821 /* nav_bg.png */; };
 		537694901A60C428008AB6B8 /* UIButton+MJM.m in Sources */ = {isa = PBXBuildFile; fileRef = 5376948F1A60C428008AB6B8 /* UIButton+MJM.m */; };
 		537694931A60CABA008AB6B8 /* UILabel+MJM.m in Sources */ = {isa = PBXBuildFile; fileRef = 537694921A60CABA008AB6B8 /* UILabel+MJM.m */; };
 		537694951A60FD91008AB6B8 /* arrow_mainColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 537694941A60FD91008AB6B8 /* arrow_mainColor.png */; };
@@ -44,6 +46,7 @@
 		537694991A61612D008AB6B8 /* star_noColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 537694971A61612D008AB6B8 /* star_noColor.png */; };
 		5376949C1A6172C5008AB6B8 /* star_mainColor2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5376949A1A6172C5008AB6B8 /* star_mainColor2.png */; };
 		5376949D1A6172C5008AB6B8 /* star_noColor2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5376949B1A6172C5008AB6B8 /* star_noColor2.png */; };
+		539935361A6680A90026F2C0 /* KKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 539935351A6680A90026F2C0 /* KKNavigationController.m */; };
 		53BB39581A6234AB0076A623 /* ContentMainview.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BB39571A6234AB0076A623 /* ContentMainview.m */; };
 		53BB395B1A62640A0076A623 /* SelectionHeadButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BB395A1A62640A0076A623 /* SelectionHeadButton.m */; };
 		53BB395E1A6285DB0076A623 /* MainData.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BB395D1A6285DB0076A623 /* MainData.m */; };
@@ -71,7 +74,6 @@
 		53DA80541A651AFD00697940 /* flash2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 53DA80531A651AFD00697940 /* flash2.jpg */; };
 		53DA805A1A65342E00697940 /* DramaDetailsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DA80591A65342E00697940 /* DramaDetailsData.m */; };
 		53DA805D1A65356D00697940 /* DramaSingleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DA805C1A65356D00697940 /* DramaSingleVC.m */; };
-		53DA80611A65422C00697940 /* KKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DA80601A65422C00697940 /* KKNavigationController.m */; };
 		5F5C37B51A5BEF2000358678 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C37B41A5BEF2000358678 /* main.m */; };
 		5F5C37BB1A5BEF2000358678 /* MJMProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C37B91A5BEF2000358678 /* MJMProject.xcdatamodeld */; };
 		5F5C37C31A5BEF2000358678 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C37C21A5BEF2000358678 /* Images.xcassets */; };
@@ -140,6 +142,8 @@
 		532D70A91A5C089600770242 /* TabBar4Sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabBar4Sel.png; sourceTree = "<group>"; };
 		532D70B21A5C0BDB00770242 /* UIImage+MJM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MJM.h"; sourceTree = "<group>"; };
 		532D70B31A5C0BDB00770242 /* UIImage+MJM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MJM.m"; sourceTree = "<group>"; };
+		533E4EEA1A668F94002D1821 /* clear_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear_bg.png; sourceTree = "<group>"; };
+		533E4EEC1A66908B002D1821 /* nav_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_bg.png; sourceTree = "<group>"; };
 		5376948E1A60C428008AB6B8 /* UIButton+MJM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+MJM.h"; sourceTree = "<group>"; };
 		5376948F1A60C428008AB6B8 /* UIButton+MJM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+MJM.m"; sourceTree = "<group>"; };
 		537694911A60CABA008AB6B8 /* UILabel+MJM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+MJM.h"; sourceTree = "<group>"; };
@@ -149,6 +153,8 @@
 		537694971A61612D008AB6B8 /* star_noColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_noColor.png; sourceTree = "<group>"; };
 		5376949A1A6172C5008AB6B8 /* star_mainColor2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_mainColor2.png; sourceTree = "<group>"; };
 		5376949B1A6172C5008AB6B8 /* star_noColor2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_noColor2.png; sourceTree = "<group>"; };
+		539935341A6680A90026F2C0 /* KKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKNavigationController.h; sourceTree = "<group>"; };
+		539935351A6680A90026F2C0 /* KKNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKNavigationController.m; sourceTree = "<group>"; };
 		53BB39561A6234AB0076A623 /* ContentMainview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentMainview.h; sourceTree = "<group>"; };
 		53BB39571A6234AB0076A623 /* ContentMainview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentMainview.m; sourceTree = "<group>"; };
 		53BB39591A62640A0076A623 /* SelectionHeadButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionHeadButton.h; sourceTree = "<group>"; };
@@ -194,8 +200,6 @@
 		53DA80591A65342E00697940 /* DramaDetailsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DramaDetailsData.m; sourceTree = "<group>"; };
 		53DA805B1A65356D00697940 /* DramaSingleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DramaSingleVC.h; sourceTree = "<group>"; };
 		53DA805C1A65356D00697940 /* DramaSingleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DramaSingleVC.m; sourceTree = "<group>"; };
-		53DA805F1A65422C00697940 /* KKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKNavigationController.h; sourceTree = "<group>"; };
-		53DA80601A65422C00697940 /* KKNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKNavigationController.m; sourceTree = "<group>"; };
 		5F5C37AF1A5BEF2000358678 /* MJMProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJMProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5C37B31A5BEF2000358678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F5C37B41A5BEF2000358678 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -247,7 +251,8 @@
 				532BBE5C1A5F782000106366 /* NSString+WPAttributedMarkup.h */,
 				532BBE5D1A5F782000106366 /* NSString+WPAttributedMarkup.m */,
 			);
-			path = WPAttributedMarkup;
+			name = WPAttributedMarkup;
+			path = Category/WPAttributedMarkup;
 			sourceTree = "<group>";
 		};
 		532D70561A5BF34E00770242 /* class */ = {
@@ -452,7 +457,8 @@
 		532D706D1A5BF34F00770242 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				53DA805E1A65422C00697940 /* KKNavigationController */,
+				532BBE591A5F782000106366 /* WPAttributedMarkup */,
+				539935331A6680A90026F2C0 /* KKNavigationController */,
 				53DA803A1A65142B00697940 /* MJRefresh */,
 				532BBE4F1A5F781A00106366 /* Extras */,
 				532D70701A5BF52D00770242 /* WWSideslipViewControllerClass */,
@@ -464,7 +470,6 @@
 		532D706E1A5BF34F00770242 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				532BBE591A5F782000106366 /* WPAttributedMarkup */,
 				532D70B21A5C0BDB00770242 /* UIImage+MJM.h */,
 				532D70B31A5C0BDB00770242 /* UIImage+MJM.m */,
 				532BBE6F1A60BC8A00106366 /* UIView+MJM.h */,
@@ -489,6 +494,8 @@
 		532D70831A5BFB5800770242 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				533E4EEC1A66908B002D1821 /* nav_bg.png */,
+				533E4EEA1A668F94002D1821 /* clear_bg.png */,
 				53DA80531A651AFD00697940 /* flash2.jpg */,
 				53BB39751A6394780076A623 /* content_selectionview_arrow.png */,
 				53BB39731A63932A0076A623 /* content_moreArrow.png */,
@@ -515,6 +522,15 @@
 				532D70A91A5C089600770242 /* TabBar4Sel.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		539935331A6680A90026F2C0 /* KKNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				539935341A6680A90026F2C0 /* KKNavigationController.h */,
+				539935351A6680A90026F2C0 /* KKNavigationController.m */,
+			);
+			path = KKNavigationController;
 			sourceTree = "<group>";
 		};
 		53DA80321A64E0E700697940 /* ContentMore */ = {
@@ -568,15 +584,6 @@
 				53DA804A1A65142B00697940 /* UIView+MJExtension.m */,
 			);
 			path = MJRefresh;
-			sourceTree = "<group>";
-		};
-		53DA805E1A65422C00697940 /* KKNavigationController */ = {
-			isa = PBXGroup;
-			children = (
-				53DA805F1A65422C00697940 /* KKNavigationController.h */,
-				53DA80601A65422C00697940 /* KKNavigationController.m */,
-			);
-			path = KKNavigationController;
 			sourceTree = "<group>";
 		};
 		5F5C37A61A5BEF2000358678 = {
@@ -730,6 +737,7 @@
 				537694981A61612D008AB6B8 /* star_mainColor.png in Resources */,
 				537694951A60FD91008AB6B8 /* arrow_mainColor.png in Resources */,
 				53DA80541A651AFD00697940 /* flash2.jpg in Resources */,
+				533E4EEB1A668F94002D1821 /* clear_bg.png in Resources */,
 				537694991A61612D008AB6B8 /* star_noColor.png in Resources */,
 				53BB39761A6394780076A623 /* content_selectionview_arrow.png in Resources */,
 				5306ACF91A5CE38D00313D4A /* yellowArrow.png in Resources */,
@@ -739,6 +747,7 @@
 				532D70B01A5C089600770242 /* TabBar4.png in Resources */,
 				53DA804B1A65142B00697940 /* MJRefresh.bundle in Resources */,
 				53BB39721A6391780076A623 /* content_more.png in Resources */,
+				533E4EED1A66908B002D1821 /* nav_bg.png in Resources */,
 				532D70AB1A5C089600770242 /* TabBar1Sel.png in Resources */,
 				532D70AA1A5C089600770242 /* TabBar1.png in Resources */,
 				53BB39701A63723C0076A623 /* dog.jpg in Resources */,
@@ -767,7 +776,7 @@
 				532BBE5F1A5F782000106366 /* NSString+WPAttributedMarkup.m in Sources */,
 				53DA804C1A65142B00697940 /* MJRefreshBaseView.m in Sources */,
 				5F5C37B51A5BEF2000358678 /* main.m in Sources */,
-				53DA80611A65422C00697940 /* KKNavigationController.m in Sources */,
+				539935361A6680A90026F2C0 /* KKNavigationController.m in Sources */,
 				5F5C37BB1A5BEF2000358678 /* MJMProject.xcdatamodeld in Sources */,
 				532BBE581A5F781A00106366 /* WPTappableLabel.m in Sources */,
 				53DA804F1A65142B00697940 /* MJRefreshHeaderView.m in Sources */,
